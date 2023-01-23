@@ -89,6 +89,7 @@
     </div>
   </div>
 </header>
+<br>
 
 <main>
 
@@ -97,8 +98,8 @@
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
       <ol class="carousel-indicators">
         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1" ></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2" ></li>
       </ol>
       <div class="carousel-inner">
         <div class="carousel-item active">
@@ -261,7 +262,7 @@
 
 
 <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
 
 
 @endsection
