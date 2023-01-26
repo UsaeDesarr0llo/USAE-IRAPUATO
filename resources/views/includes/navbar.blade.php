@@ -4,7 +4,7 @@
       <div class="row">
         <div class="col-sm-8 col-md-7 py-4">
           <h4 class="text-white text-center">USAE IRAPUATO</h4>
-          <p class="text-muted text-center">La USAE es una Unidad Administrativa de la Secretaría de Educación de Guanajuato, SEG dependiente del Gobierno del Estado de Guanajuato, con función de enlace administrativo en el municipio de Irapuato. Encargada de atender a la comunidad educativa de educación básica del municipio de Irapuato.
+          <p class="text-white text-center">La USAE es una Unidad Administrativa de la Secretaría de Educación de Guanajuato, SEG dependiente del Gobierno del Estado de Guanajuato, con función de enlace administrativo en el municipio de Irapuato. Encargada de atender a la comunidad educativa de educación básica del municipio de Irapuato.
           </p>
         </div>
         <div class="col-sm-4 offset-md-1 py-4">

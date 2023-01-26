@@ -19,4 +19,7 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home')->middleware('verified');
+Route::get('/create', [App\Http\Controllers\HomeController::class,'create'])->name('create')->middleware('verified');
+Route::post('/create', [App\Http\Controllers\HomeController::class,'store'])->name('store')->middleware('verified');
+Route::post('/destroy/{id}', [App\Http\Controllers\HomeController::class,'destroy'])->name('destroy')->middleware('verified');
