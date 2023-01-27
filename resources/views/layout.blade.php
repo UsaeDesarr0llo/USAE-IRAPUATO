@@ -10,6 +10,7 @@
         <link rel="shortcut icon" href="/img/Imagen15.png" type="image/x.icon">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
         <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/album/">
+   
 
     
 
