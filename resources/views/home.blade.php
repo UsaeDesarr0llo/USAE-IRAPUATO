@@ -52,14 +52,13 @@
         </div>
     </div>
 </div>
-@endsection
 <script>
     (function() {
   'use strict'
 
   var forms = document.querySelectorAll('.formEliminar')
   Array.prototype.slice.call(forms)
-    .forEach(function (forms)) {  
+    .forEach(function (form) {  
         form.addEventListener('submit', function (event) {
             event.preventDefault()
             event.stopPropagation()
@@ -80,3 +79,4 @@
     })
 })()
 </script>
+@endsection

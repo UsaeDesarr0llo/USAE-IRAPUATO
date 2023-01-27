@@ -2,8 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Validation\Rule;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller as controller;
+use App\Models\Imagen;
+use Illuminate\Support\Facades\DB;
 
 
 class indexController extends controller
@@ -11,6 +15,7 @@ class indexController extends controller
    
     public function home()
     {
+        $images = Imagen::all();
         return view('index');
     }
     public function directores()
@@ -69,5 +74,27 @@ class indexController extends controller
         return view('personalUSAE.SP');
     }
 
-   
+   public function avisos(){
+        $images = Imagen::paginate(3);
+        return View('welcome', compact('images'));
+    //$images = Imagen::all();
+    /* $images = Imagen::join("Imagen.imagen", "=", "Imagen.id")
+    ->select("Imagen.id","Imagen.imagen")
+    ->where("Imagen.id", "=", $id)
+    ->first(); */
+    //$imagenes = DB::table('imagens')->get();
+        //return view('welcome', compact('images'));
+       // $images = DB::select('select * from Imagen where  = $id');
+       // return view('/welcome', ['imagenes' => $images]);
+       /* $imagenes = DB::table('Imagen')->get();
+ 
+        return view('welcome', ['Imagen' => $imagenes]); */
+        /* $imagen = 'SELECT * FROM Imagen';
+        $imagenes = DB::select($imagen);
+        return $imagenes; */
+   }
 }
+
+//php artisan view:clear
+//php artisan make:auth
+
