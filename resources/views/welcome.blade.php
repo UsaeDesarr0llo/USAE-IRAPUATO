@@ -32,6 +32,14 @@
       </div>
     </div>
   </div>
+  <ul>
+    @foreach ($contador as $contado)
+      <li>{{ $contado->ip }}</li>
+    @endforeach
+    <div>
+      {!! $contado->links() !!}
+    </div>
+  </ul>
   <!-- NAVBAR -->
   <div class="navbar navbar-dark bg-primary">
     <div class="container">

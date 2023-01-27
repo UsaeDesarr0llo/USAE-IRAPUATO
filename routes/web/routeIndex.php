@@ -18,3 +18,4 @@ Route::get('/INF', [indexController::class,'INF']);
 Route::get('/PDPD', [indexController::class,'PDPD']);
 Route::get('/PL', [indexController::class,'PL']);
 Route::get('/SP', [indexController::class,'SP']);
+

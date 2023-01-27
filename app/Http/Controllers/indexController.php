@@ -5,13 +5,12 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller as controller;
 
-
 class indexController extends controller
 {
    
     public function home()
     {
-        return view('index');
+        return view('welcome');
     }
     public function directores()
     {
@@ -69,5 +68,4 @@ class indexController extends controller
         return view('personalUSAE.SP');
     }
 
-   
 }

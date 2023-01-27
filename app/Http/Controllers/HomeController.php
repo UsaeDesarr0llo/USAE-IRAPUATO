@@ -37,7 +37,7 @@ class HomeController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'imagen' => 'required|image|mimes:png,jpg,webp|max:1024'
+            'imagen' => 'required|image|mimes:png,jpg,webp|max:3024'
         ]);
         $images = $request->all();
 
