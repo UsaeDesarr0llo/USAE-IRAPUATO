@@ -25,3 +25,12 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/create', [App\Http\Controllers\HomeController::class,'create'])->name('create')->middleware('verified');
 Route::post('/create', [App\Http\Controllers\HomeController::class,'store'])->name('store')->middleware('verified');
 Route::post('/destroy/{id}', [App\Http\Controllers\HomeController::class,'destroy'])->name('destroy')->middleware('verified');
+Route::delete('/{id}',[App\Http\Controllers\HomeController::class,'destroy'])->name('destroy')->middleware('verified');
+
+/*
+|--------------------------------------------------------------------------
+| Web Routes for welcome (anuncios or contador)
+|--------------------------------------------------------------------------
+|
+*/
+Route::get('/', [App\Http\Controllers\indexController::class, 'avisos'])->name('welcome');

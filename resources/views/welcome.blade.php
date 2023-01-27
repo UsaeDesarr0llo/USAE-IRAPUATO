@@ -94,6 +94,8 @@
 
   <!-- CAMPO AVISOS -->
   @foreach ($imagenes as $imagen)
+<!-- CAMPO AVISOS -->
+@foreach ($images as $imagen)
   <div class="container">
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
       <ol class="carousel-indicators">
@@ -105,6 +107,8 @@
         <div class="carousel-item active">
         <td>{{$imagenes->id}}</td>
           <img class="d-block w-100" src="/imagen/{{$imagenes->imagen}}" alt="First slide">
+        <td>{{$imagen->id}}</td>
+          <img class="d-block w-100" src="/imagen/{{$imagen->imagen}}" alt="First slide">
         </div>
         <div class="carousel-item">
           <img class="d-block w-100" src="https://www.seg.guanajuato.gob.mx/PublishingImages/2022/octubre/territorios.jpeg" alt="Second slide">
@@ -131,6 +135,12 @@
 
   <!-- CAMPO DIRECTORES -->
   <div class="album py-5 bg-light" id="abajo">
+@endforeach
+<div>
+{!! $images->links() !!}
+</div>
+<!-- CAMPO DIRECTORES -->
+<div class="album py-5 bg-light" id="abajo">
     <div class="container">
 
       <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">

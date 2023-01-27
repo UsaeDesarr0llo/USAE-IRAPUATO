@@ -2,12 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Validation\Rule;
-use Carbon\Carbon;
+
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller as controller;
 use App\Models\Imagen;
-use Illuminate\Support\Facades\DB;
+
 
 
 class indexController extends controller

@@ -20,9 +20,9 @@
             <table class="table-fixed w-full">
                 <thead>
                     <tr class="bg-gray-800 text-white">
-                        <th>ID</th>
+                        <th>Número de Imagen</th>
                         <th class="border px-4 py-1">Imagenes</th>
-                        <th>Accion</th>
+                        <th>Acción</th>
                     </tr>
                 </thead>
                 <tbody>
