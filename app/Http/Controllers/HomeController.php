@@ -7,6 +7,9 @@ use App\Models\Imagen;
 
 class HomeController extends Controller
 {
+    public function __construct() {
+        $this->middleware('auth');
+    }
     /**
      * Display a listing of the resource.
      *
@@ -37,7 +40,7 @@ class HomeController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'imagen' => 'required|image|mimes:png,jpg,webp|max:1024'
+            'imagen' => 'required|image|mimes:png,jpg,webp|max:3024'
         ]);
         $images = $request->all();
 
@@ -56,14 +59,14 @@ class HomeController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \Illuminate\Http\Response  $product
+     * @param  \App\Models\Product  $product
      * @return \Illuminate\Http\Response
      */
-    public function destroy()
+    public function destroy(Imagen $id)
     {
+        $id->delete();
       
-        return redirect()->route('index')
+        return redirect()->route('home')
                         ->with('success','Product deleted successfully');
     }
-
 }
