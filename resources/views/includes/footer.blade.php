@@ -1,4 +1,9 @@
 <!-- FOOTER FINAL SITIO -->
+
+<script src="https://example.com/fontawesome/v6.2.1/js/fontawesome.js" data-auto-replace-svg="nest"></script>
+  <script src="https://example.com/fontawesome/v6.2.1/js/solid.js"></script>
+  <script src="https://example.com/fontawesome/v6.2.1/js/brands.js"></script>
+
 <footer class="bg-primary text-white text-center text-lg-start">
   <!-- Grid container -->
   <div class="container p-5">
@@ -59,5 +64,9 @@
   <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
     USAE IRAPUATO.
   </div>
+
+  
+
+
   
 </footer>

@@ -10,6 +10,7 @@
         <link rel="shortcut icon" href="/img/Imagen15.png" type="image/x.icon">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
         <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/album/">
+        <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="110682f3-42aa-496e-8a0a-7a7dc0497bce";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
 
     
 
