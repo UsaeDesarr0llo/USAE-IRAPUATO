@@ -68,8 +68,8 @@
     </div>
   </div>
 </header>
-
 <main>
+<br>
 <!-- CAMPO AVISOS -->
 @foreach ($images as $imagen)
   <div class="container">
@@ -81,14 +81,13 @@
       </ol>
       <div class="carousel-inner">
         <div class="carousel-item active">
-        <td>{{$imagen->id}}</td>
-          <img class="d-block w-100" src="/imagen/{{$imagen->imagen}}" alt="First slide">
+          <img class="d-block w-100" src="https://www.seg.guanajuato.gob.mx/TuEspacioDocente/PublishingImages/arte/Bolsabnntrabajo.png" alt="First slide">
         </div>
         <div class="carousel-item">
-          <img class="d-block w-100" src="https://www.seg.guanajuato.gob.mx/PublishingImages/2022/octubre/territorios.jpeg" alt="Second slide">
+          <img class="d-block w-100" src="/imagen/{{$imagen->imagen}}" alt="Second slide">
         </div>
         <div class="carousel-item">
-          <img class="d-block w-100" src="https://www.seg.guanajuato.gob.mx/TuEspacioDocente/PublishingImages/arte/Bolsabnntrabajo.png" alt="Third slide">
+          <img class="d-block w-100" src="https://www.seg.guanajuato.gob.mx/PublishingImages/2022/octubre/territorios.jpeg" alt="Third slide">
         </div>
       </div>
       <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
