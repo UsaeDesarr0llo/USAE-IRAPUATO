@@ -92,10 +92,9 @@
 
 <main>
 
-  <!-- CAMPO AVISOS -->
-  @foreach ($imagenes as $imagen)
+
 <!-- CAMPO AVISOS -->
-@foreach ($images as $imagen)
+
   <div class="container">
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
       <ol class="carousel-indicators">
@@ -104,17 +103,22 @@
         <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
       </ol>
       <div class="carousel-inner">
+      
         <div class="carousel-item active">
-        <td>{{$imagenes->id}}</td>
-          <img class="d-block w-100" src="/imagen/{{$imagenes->imagen}}" alt="First slide">
+        @foreach ($img1 as $imagen)
         <td>{{$imagen->id}}</td>
-          <img class="d-block w-100" src="/imagen/{{$imagen->imagen}}" alt="First slide">
+          <img class="d-block w-100" src="/imagen/{{$imagen->imagen}}" alt="First slide" height="720">
+        @endforeach
         </div>
         <div class="carousel-item">
-          <img class="d-block w-100" src="https://www.seg.guanajuato.gob.mx/PublishingImages/2022/octubre/territorios.jpeg" alt="Second slide">
+        @foreach ($img2 as $img)
+          <img class="d-block w-100" src="/imagen/{{$img->imagen}}" alt="Second slide" height="720">
+        @endforeach
         </div>
         <div class="carousel-item">
-          <img class="d-block w-100" src="https://www.seg.guanajuato.gob.mx/TuEspacioDocente/PublishingImages/arte/Bolsabnntrabajo.png" alt="Third slide">
+        @foreach ($img3 as $imag)
+          <img class="d-block w-100" src="/imagen/{{$imag->imagen}}" alt="Third slide" height="720">
+        @endforeach
         </div>
       </div>
       <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -127,18 +131,9 @@
       </a>
     </div>
   </div>
-  @endforeach
   <div>
-{!! $images->links() !!}
 </div>
 
-
-  <!-- CAMPO DIRECTORES -->
-  <div class="album py-5 bg-light" id="abajo">
-@endforeach
-<div>
-{!! $images->links() !!}
-</div>
 <!-- CAMPO DIRECTORES -->
 <div class="album py-5 bg-light" id="abajo">
     <div class="container">
