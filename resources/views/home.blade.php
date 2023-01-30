@@ -20,9 +20,9 @@
             <table class="table-fixed w-full">
                 <thead>
                     <tr class="bg-gray-800 text-white">
-                        <th>ID</th>
+                        <th>Número de Imagen</th>
                         <th class="border px-4 py-1">Imagenes</th>
-                        <th>Accion</th>
+                        <th>Acción</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -52,14 +52,13 @@
         </div>
     </div>
 </div>
-@endsection
 <script>
     (function() {
   'use strict'
 
   var forms = document.querySelectorAll('.formEliminar')
   Array.prototype.slice.call(forms)
-    .forEach(function (forms)) {  
+    .forEach(function (form) {  
         form.addEventListener('submit', function (event) {
             event.preventDefault()
             event.stopPropagation()
@@ -80,3 +79,4 @@
     })
 })()
 </script>
+@endsection

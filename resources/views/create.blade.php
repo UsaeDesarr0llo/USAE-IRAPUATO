@@ -28,7 +28,7 @@
           <img id="imagenSeleccionada" style="max-height: 300px;">
         </div>     
           <div class="grid grid-cols-1 space-y-2">
-                                    <label class="text-sm font-bold text-gray-500 tracking-wide">Documento adjunto</label>
+                                    <label class="text-sm font-bold text-gray-500 tracking-wide">Imagen adjunto</label>
                         <div class="flex items-center justify-center w-full">
                             <label class="flex flex-col rounded-lg border-4 border-dashed w-full h-60 p-10 group text-center">
                                 <div class="h-full w-full text-center flex flex-col items-center justify-center items-center  ">
@@ -45,7 +45,7 @@
                         </div>
                     </div>
                             <p class="text-sm text-gray-300">
-                                <span>Tipo de archivo aceptado con un peso de 5MB: PNG, JPG, WEBP</span>
+                                <span>Tipo de archivo aceptado con un peso de 3MB: PNG, JPG, WEBP</span>
                             </p>
                     <div>
                       <div class="flex items-center justify-center md:gap-8 gap-4 pt-5 pb-5">

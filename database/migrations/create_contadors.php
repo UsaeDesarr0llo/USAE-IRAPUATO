@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('TContador', function (Blueprint $table) {
+        Schema::create('contadors', function (Blueprint $table) {
             $table->id();
             $table->string('ip');
             $table->date('fecha');

@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Imagen;
 use Illuminate\Routing\Controller as controller;
+use App\Models\Contador;
 
 class indexController extends controller
 {
@@ -67,5 +69,13 @@ class indexController extends controller
     public function SP(){
         return view('personalUSAE.SP');
     }
-
+    public function avisos()
+    {
+        $images = Imagen::paginate(3);
+        
+        /* Funcionalidad del Contador */
+        $contador = Contador::All()->count();
+        return View('welcome', compact('images', 'contador'));
+    }
+    
 }
