@@ -11,10 +11,12 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
         <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/album/">
         <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="110682f3-42aa-496e-8a0a-7a7dc0497bce";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
-       
-<!-- Bootstrap core CSS -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+    @yield('css')
 <style>
       .bd-placeholder-img {
         font-size: 1.125rem;
@@ -32,15 +34,18 @@
     </style>
         @yield('css')
     @yield('script')
-    </head>
-    <body>
+</head>
+
+<body>
     @yield('content')
 
     
 
 
-    </body>
-    
+
+</body>
+
+
   
     <script src="/js/bootstrap.bundle.min.js"></script>
     <script src="/js/jquery-3.6.0.min.js"></script>

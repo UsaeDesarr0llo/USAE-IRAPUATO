@@ -20,7 +20,7 @@ class HomeController extends Controller
         $images = Imagen::paginate(3);
         return View('home', compact('images'));
     }
- 
+
     /**
      * Show the application dashboard.
      *

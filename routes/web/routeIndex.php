@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\indexController;
 
+
 Route::get('/', [indexController::class,'home']);
 Route::get('/directores', [indexController::class,'directores']);
 Route::get('/docentes', [indexController::class,'docentes']);
@@ -18,3 +19,6 @@ Route::get('/INF', [indexController::class,'INF']);
 Route::get('/PDPD', [indexController::class,'PDPD']);
 Route::get('/PL', [indexController::class,'PL']);
 Route::get('/SP', [indexController::class,'SP']);
+
+//Route::get('/', [App\Http\Controllers\indexController::class, 'avisos'])->name('welcome');
+//Route::get('/welcome', 'App\Http\Controllers\indexController@avisos')->name('avisos');
