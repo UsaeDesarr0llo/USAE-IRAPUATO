@@ -73,8 +73,6 @@
   </div>
 </header>
 <main>
-<br>
-<br>
 <div id="sfc2qulzjzdulbsckcysn97k5u2uwxpxxsl"></div>
     <script type="text/javascript" src="https://counter5.optistats.ovh/private/counter.js?c=2qulzjzdulbsckcysn97k5u2uwxpxxsl&down=async" async></script>
     <br><noscript><a href="https://www.contadorvisitasgratis.com" title="contador de visitas"><img src="https://counter5.optistats.ovh/private/contadorvisitasgratis.php?c=2qulzjzdulbsckcysn97k5u2uwxpxxsl" border="0" title="contador de visitas" alt="contador de visitas"></a></noscript>
@@ -91,22 +89,20 @@
   <div class="carousel-inner">
     <div class="carousel-item active">
     @foreach ($img1 as $imagen)
-          <img class="d-block w-100" src="/imagen/{{$imagen->imagen}}" alt="First slide" height="409">
-        @endforeach
+      <img class="d-block w-100" src="/imagen/{{$imagen->imagen}}" alt="First slide" height="409">
+    @endforeach
     </div>
     <div class="carousel-item">
     @foreach ($img2 as $img)
-          <img class="d-block w-100" src="/imagen/{{$img->imagen}}" alt="Second slide" height="409">
-        @endforeach
+      <img class="d-block w-100" src="/imagen/{{$img->imagen}}" alt="Second slide" height="409">
+    @endforeach
     </div>
     <div class="carousel-item">
     @foreach ($img3 as $imag)
-          <img class="d-block w-100" src="/imagen/{{$imag->imagen}}" alt="Third slide" height="409">
-        @endforeach
+      <img class="d-block w-100" src="/imagen/{{$imag->imagen}}" alt="Third slide" height="409">
+    @endforeach
     </div>
   </div>
-@endforeach
-
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Previous</span>
