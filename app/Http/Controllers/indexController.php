@@ -2,10 +2,14 @@
 
 namespace App\Http\Controllers;
 
+
 use Illuminate\Http\Request;
-use App\Models\Imagen;
 use Illuminate\Routing\Controller as controller;
 use App\Models\Contador;
+use App\Models\Imagen;
+use Illuminate\Support\Facades\DB;
+
+
 
 class indexController extends controller
 {
@@ -13,6 +17,8 @@ class indexController extends controller
     public function home()
     {
         return view('welcome');
+        $images = Imagen::all();
+        return view('index');
     }
     public function directores()
     {
@@ -69,14 +75,13 @@ class indexController extends controller
     public function SP(){
         return view('personalUSAE.SP');
     }
-    public function avisos()
-    {
-        $images = Imagen::paginate(3);
-        
-        /* Funcionalidad del Contador */        
-        $contador = Contador::All()->count();
-        return View('welcome', compact('images', 'contador'));
-        return View('includes.footer', compact('contador'));
-    }
-    
+
+   public function avisos(){
+
+        $img1 = DB::select('select id, imagen from imagens where id = 1');
+        $img2 = DB::select('select id, imagen from imagens where id = 2');
+        $img3 = DB::select('select id, imagen from imagens where id = 3');
+
+        return View('welcome', compact('img1', 'img2', 'img3'));
+   }
 }
