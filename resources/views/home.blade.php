@@ -65,6 +65,7 @@
                         </td>
                         <td class="border px-4 py-2">
                             <div class="flex justify-center rounded-lg text-lg" role="group">
+                                <a href="{{ route('edit', $image->id) }}" class="rounded bg-gray-500 hover:bg-gray-600 text-white font-bold py-2 px-4">Editar</a>
                                 <!-- botton borrar -->
                                 <form action="{{ route('destroy', $image->id) }}" method="POST" class="formEliminar">
                                     @csrf

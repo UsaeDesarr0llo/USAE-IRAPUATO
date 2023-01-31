@@ -64,6 +64,17 @@ class HomeController extends Controller
      * @param  \App\Models\Product  $product
      * @return \Illuminate\Http\Response
      */
+    public function edit()
+    {
+        return view('edit');
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  \App\Models\Product  $product
+     * @return \Illuminate\Http\Response
+     */
     public function destroy(Imagen $id)
     {
         $id->delete();
