@@ -101,10 +101,6 @@
         @endforeach
     </div>
   </div>
-<<<<<<< HEAD
-@endforeach
-
-=======
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Previous</span>
@@ -115,7 +111,6 @@
   </button>
 </div>
 </div>
->>>>>>> 05daf1621b1040089e1a729074da254e864c2412
 <!-- CAMPO DIRECTORES -->
 <div class="album py-5 bg-light" id="abajo">
     <div class="container">
