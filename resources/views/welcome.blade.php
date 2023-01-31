@@ -2,26 +2,9 @@
 
 @section('titulo','USAE Irapuato')
 @section('css')
-<style>
-  .bd-placeholder-img {
-    font-size: 1.125rem;
-    text-anchor: middle;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    user-select: none;
-  }
-
-  @media (min-width: 768px) {
-    .bd-placeholder-img-lg {
-      font-size: 3.5rem;
-    }
-  }
-</style>
 @endsection
 
 @section('content')
-
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 
 <header>
   <div class="collapse bg-dark" id="navbarHeader">
@@ -88,52 +71,47 @@
     </div>
   </div>
 </header>
+<main>
+<br>
 <br>
 
 <main>
-
-
 <!-- CAMPO AVISOS -->
 
-  <div class="container">
-    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-      <ol class="carousel-indicators">
-        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-      </ol>
-      <div class="carousel-inner">
-      
-        <div class="carousel-item active">
-        @foreach ($img1 as $imagen)
-        <td>{{$imagen->id}}</td>
+<div class="container">
+<div id="carouselExampleIndicators" class="carousel slide">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+    @foreach ($img1 as $imagen)
           <img class="d-block w-100" src="/imagen/{{$imagen->imagen}}" alt="First slide" height="720">
         @endforeach
-        </div>
-        <div class="carousel-item">
-        @foreach ($img2 as $img)
+    </div>
+    <div class="carousel-item">
+    @foreach ($img2 as $img)
           <img class="d-block w-100" src="/imagen/{{$img->imagen}}" alt="Second slide" height="720">
         @endforeach
-        </div>
-        <div class="carousel-item">
-        @foreach ($img3 as $imag)
+    </div>
+    <div class="carousel-item">
+    @foreach ($img3 as $imag)
           <img class="d-block w-100" src="/imagen/{{$imag->imagen}}" alt="Third slide" height="720">
         @endforeach
-        </div>
-      </div>
-      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
     </div>
   </div>
-  <div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
 </div>
-
+</div>
 <!-- CAMPO DIRECTORES -->
 <div class="album py-5 bg-light" id="abajo">
     <div class="container">
