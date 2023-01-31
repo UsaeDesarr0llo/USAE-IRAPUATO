@@ -82,4 +82,14 @@ class HomeController extends Controller
         return redirect()->route('home')
                         ->with('success','Product deleted successfully');
     }
+
+     /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\http\Response
+     */
+    public function Personal()
+    {
+        return view('Personal');
+    }
 }

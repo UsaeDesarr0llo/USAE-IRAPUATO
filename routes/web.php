@@ -26,6 +26,7 @@ Route::get('/create', [App\Http\Controllers\HomeController::class,'create'])->na
 Route::post('/create', [App\Http\Controllers\HomeController::class,'store'])->name('store')->middleware('verified');
 Route::get('/edit', [App\Http\Controllers\HomeController::class,'edit'])->name('edit')->middleware('verified');
 Route::delete('/{id}',[App\Http\Controllers\HomeController::class,'destroy'])->name('destroy')->middleware('verified');
+Route::get('/Personal', [App\Http\Controllers\HomeController::class,'Personal'])->name('Personal')->middleware('verified');
 
 /*
 |--------------------------------------------------------------------------
@@ -34,5 +35,3 @@ Route::delete('/{id}',[App\Http\Controllers\HomeController::class,'destroy'])->n
 |
 */
 Route::get('/', [App\Http\Controllers\indexController::class, 'avisos'])->name('welcome');
-
-
