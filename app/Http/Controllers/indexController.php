@@ -73,9 +73,10 @@ class indexController extends controller
     {
         $images = Imagen::paginate(3);
         
-        /* Funcionalidad del Contador */
+        /* Funcionalidad del Contador */        
         $contador = Contador::All()->count();
         return View('welcome', compact('images', 'contador'));
+        return View('includes.footer', compact('contador'));
     }
     
 }

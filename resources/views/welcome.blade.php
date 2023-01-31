@@ -6,7 +6,6 @@
 @endsection
 
 @section('content')
-
 <header>
   <div class="collapse bg-dark" id="navbarHeader">
     <div class="container">
@@ -32,9 +31,6 @@
       </div>
     </div>
   </div>
-  <ul>
-    <h2>{{$contador}}</h2>
-  </ul>
   <!-- NAVBAR -->
   <div class="navbar navbar-dark bg-primary">
     <div class="container">
