@@ -33,3 +33,5 @@ Route::delete('/{id}',[App\Http\Controllers\HomeController::class,'destroy'])->n
 |
 */
 Route::get('/', [App\Http\Controllers\indexController::class, 'avisos'])->name('welcome');
+
+

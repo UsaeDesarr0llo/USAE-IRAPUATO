@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller as controller;
+use App\Models\Contador;
 use App\Models\Imagen;
 use Illuminate\Support\Facades\DB;
 
@@ -15,6 +16,7 @@ class indexController extends controller
    
     public function home()
     {
+        return view('welcome');
         $images = Imagen::all();
         return view('index');
     }
