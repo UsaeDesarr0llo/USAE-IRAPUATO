@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Imagen;
+use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
 {
@@ -18,7 +19,8 @@ class HomeController extends Controller
     public function index()
     {
         $images = Imagen::paginate(3);
-        return View('home', compact('images'));
+        $img = Imagen::all();
+        return View('home', compact('images', 'img'));
     }
 
     /**

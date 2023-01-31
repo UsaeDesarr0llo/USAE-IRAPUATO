@@ -5,6 +5,7 @@
 @endsection
 
 @section('content')
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 
 <header>
   <div class="collapse bg-dark" id="navbarHeader">
@@ -74,7 +75,9 @@
 <main>
 <br>
 <br>
-
+<div id="sfc2qulzjzdulbsckcysn97k5u2uwxpxxsl"></div>
+    <script type="text/javascript" src="https://counter5.optistats.ovh/private/counter.js?c=2qulzjzdulbsckcysn97k5u2uwxpxxsl&down=async" async></script>
+    <br><noscript><a href="https://www.contadorvisitasgratis.com" title="contador de visitas"><img src="https://counter5.optistats.ovh/private/contadorvisitasgratis.php?c=2qulzjzdulbsckcysn97k5u2uwxpxxsl" border="0" title="contador de visitas" alt="contador de visitas"></a></noscript>
 <main>
 <!-- CAMPO AVISOS -->
 
@@ -88,17 +91,17 @@
   <div class="carousel-inner">
     <div class="carousel-item active">
     @foreach ($img1 as $imagen)
-          <img class="d-block w-100" src="/imagen/{{$imagen->imagen}}" alt="First slide" height="720">
+          <img class="d-block w-100" src="/imagen/{{$imagen->imagen}}" alt="First slide" height="409">
         @endforeach
     </div>
     <div class="carousel-item">
     @foreach ($img2 as $img)
-          <img class="d-block w-100" src="/imagen/{{$img->imagen}}" alt="Second slide" height="720">
+          <img class="d-block w-100" src="/imagen/{{$img->imagen}}" alt="Second slide" height="409">
         @endforeach
     </div>
     <div class="carousel-item">
     @foreach ($img3 as $imag)
-          <img class="d-block w-100" src="/imagen/{{$imag->imagen}}" alt="Third slide" height="720">
+          <img class="d-block w-100" src="/imagen/{{$imag->imagen}}" alt="Third slide" height="409">
         @endforeach
     </div>
   </div>
@@ -247,10 +250,6 @@
 
 </footer>
 
-
-
 <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
-
-
 
 @endsection
