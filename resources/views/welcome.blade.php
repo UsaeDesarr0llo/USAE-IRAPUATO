@@ -82,6 +82,8 @@
     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
   </div>
   <div class="carousel-inner">
     <div class="carousel-item active">
@@ -97,6 +99,16 @@
     <div class="carousel-item">
     @foreach ($img3 as $imag)
       <img class="d-block w-100" src="/imagen/{{$imag->imagen}}" alt="Third slide" height="300">
+    @endforeach
+    </div>
+    <div class="carousel-item">
+    @foreach ($img4 as $image)
+      <img class="d-block w-100" src="/imagen/{{$image->imagen}}" alt="Four slide" height="300">
+    @endforeach
+    </div>
+    <div class="carousel-item">
+    @foreach ($img5 as $imagg)
+      <img class="d-block w-100" src="/imagen/{{$imagg->imagen}}" alt="Five slide" height="300">
     @endforeach
     </div>
   </div>

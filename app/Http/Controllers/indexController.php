@@ -81,7 +81,9 @@ class indexController extends controller
         $img1 = DB::select('select id, imagen from imagens where id = 1');
         $img2 = DB::select('select id, imagen from imagens where id = 2');
         $img3 = DB::select('select id, imagen from imagens where id = 3');
+        $img4 = DB::select('select id, imagen from imagens where id = 4');
+        $img5 = DB::select('select id, imagen from imagens where id = 5');
 
-        return View('welcome', compact('img1', 'img2', 'img3'));
+        return View('welcome', compact('img1', 'img2', 'img3', 'img4', 'img5'));
    }
 }
