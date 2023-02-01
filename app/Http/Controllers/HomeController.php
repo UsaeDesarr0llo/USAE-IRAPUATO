@@ -62,9 +62,35 @@ class HomeController extends Controller
      * @param  \App\Models\Product  $product
      * @return \Illuminate\Http\Response
      */
-    public function edit()
+    public function edit(Imagen $images)
     {
-        return view('edit');
+        return view('edit', compact('images'));
+    }
+
+         /**
+     * Remove the specified resource from storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function update(Request $request, Imagen $images)
+    {
+        $request->validate([
+            'imagen' => 'required|image|mimes:png,jpg,webp|max:3024'
+        ]);
+
+
+        $prod = $request->all();
+         if($imagen = $request->file('imagen')){
+            $rutaGuardarImg = 'imagen/';
+            $imagenProducto = date('YmdHis') . "." . $imagen->getClientOriginalExtension(); 
+            $imagen->move($rutaGuardarImg, $imagenProducto);
+            $prod['imagen'] = "$imagenProducto";
+         }else{
+            unset($prod['imagen']);
+         }
+        $images->update($prod);
+        return redirect()->route('avisos');
     }
 
     /**
@@ -73,9 +99,9 @@ class HomeController extends Controller
      * @param  \App\Models\Product  $product
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Imagen $id)
+    public function destroy(Imagen $images)
     {
-        $id->delete();
+        $images->delete();
       
         return redirect()->route('home')
                         ->with('success','Product deleted successfully');

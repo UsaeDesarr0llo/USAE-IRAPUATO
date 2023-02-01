@@ -65,7 +65,7 @@
         </svg> Iniciar Sesión</a>
       <i class="bi bi-person-circle"></i>
       @if (Route::has('register'))
-      <a href="{{ route('register') }}" class="text-white btn">Register</a>
+      <a href="{{ route('register') }}" class="text-white btn"></a>
       @endif
       @endauth
       @endif

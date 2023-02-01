@@ -3,8 +3,12 @@
 
 @section('titulo','USAE Irapuato')
 @section('css')
+<style type="text/css">
+    a:link, a:visited, a:active {
+        text-decoration:none;
+    }
+</style>
 @endsection
-
 @section('content')
 
 @if (session('status'))

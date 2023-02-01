@@ -23,10 +23,11 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home')->middleware('verified');
 Route::get('/avisos', [App\Http\Controllers\HomeController::class, 'avisos'])->name('avisos')->middleware('verified');
-Route::get('/edit', [App\Http\Controllers\HomeController::class, 'edit'])->name('edit')->middleware('verified');
+Route::get('/edit/{images}', [App\Http\Controllers\HomeController::class, 'edit'])->name('edit')->middleware('verified');
 Route::get('/create', [App\Http\Controllers\HomeController::class,'create'])->name('create')->middleware('verified');
 Route::post('/create', [App\Http\Controllers\HomeController::class,'store'])->name('store')->middleware('verified');
-Route::delete('/{id}',[App\Http\Controllers\HomeController::class,'destroy'])->name('destroy')->middleware('verified');
+Route::post('/edit/{images}', [App\Http\Controllers\HomeController::class,'update'])->name('update')->middleware('verified');
+Route::delete('/{images}',[App\Http\Controllers\HomeController::class,'destroy'])->name('destroy')->middleware('verified');
 Route::get('/Personal', [App\Http\Controllers\HomeController::class, 'Personal'])->name('Personal')->middleware('verified');
 Route::get('/Director', [App\Http\Controllers\HomeController::class, 'Director'])->name('Director')->middleware('verified');
 Route::get('/Docente', [App\Http\Controllers\HomeController::class, 'Docente'])->name('Docente')->middleware('verified');
@@ -38,3 +39,17 @@ Route::get('/Docente', [App\Http\Controllers\HomeController::class, 'Docente'])-
 |
 */
 Route::get('/', [App\Http\Controllers\indexController::class, 'avisos'])->name('welcome');
+Route::get('/directores', [App\Http\Controllers\indexController::class,'directores']);
+Route::get('/docentes', [App\Http\Controllers\indexController::class,'docentes']);
+Route::get('/personalApoyo', [App\Http\Controllers\indexController::class,'personalApoyo']);
+Route::get('/personalUSAE', [App\Http\Controllers\indexController::class,'personalUSAE']);
+Route::get('/plazaEstatal', [App\Http\Controllers\indexController::class,'plazaEstatal']);
+Route::get('/plazaEstatalpersonalapoyo', [App\Http\Controllers\indexController::class,'plazaEstatalPersonal']);
+Route::get('/plazaFederal', [App\Http\Controllers\indexController::class,'plazaFederal']);
+Route::get('/plazaFederalpersonalapoyo', [App\Http\Controllers\indexController::class,'plazaFederalPersonal']);
+Route::get('/AI', [App\Http\Controllers\indexController::class,'AI']);
+Route::get('/EA', [App\Http\Controllers\indexController::class,'EA']);
+Route::get('/INF', [App\Http\Controllers\indexController::class,'INF']);
+Route::get('/PDPD', [App\Http\Controllers\indexController::class,'PDPD']);
+Route::get('/PL', [App\Http\Controllers\indexController::class,'PL']);
+Route::get('/SP', [App\Http\Controllers\indexController::class,'SP']);

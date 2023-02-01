@@ -3,7 +3,11 @@
 
 @section('titulo','USAE Irapuato')
 @section('css')
-
+<style type="text/css">
+    a:link, a:visited, a:active {
+        text-decoration:none;
+    }
+</style>
 @endsection
 
 @section('content')
@@ -22,10 +26,12 @@
                 ¡Actualizar imagen!
 			</h2>
 		</div>
-        <form class="mt-8 space-y-3" action="" method="POST" enctype="multipart/form-data">
+        <form class="mt-8 space-y-3" action="{{ route('update', $images->id) }}" method="POST" enctype="multipart/form-data">
         @csrf
+        @method('POST')
+        
         <div class="grid grid-cols-1 mt-5 mx-7">
-          <img id="imagenSeleccionada" style="max-height: 300px;">
+          <img src="/imagen/{{$images->imagen}}" id="imagenSeleccionada" style="max-height: 300px;">
         </div>     
           <div class="grid grid-cols-1 space-y-2">
                                     <label class="text-sm font-bold text-gray-500 tracking-wide">Imagen adjunto</label>
@@ -38,7 +44,7 @@
                                     <div class="flex flex-auto max-h-48 w-2/5 mx-auto -mt-10">
                                     <img class="has-mask h-36 object-center" src="https://img.freepik.com/free-vector/image-upload-concept-landing-page_52683-27130.jpg?size=338&ext=jpg" alt="freepik image">
                                     </div>
-                                    <p class="pointer-none text-gray-500 "><span class="text-sm">Arrastrar y suelta</span> imagenes aquí <br /> o <a href="" id="" class="text-blue-600 hover:underline"> selecciona tu imagen </a> desde tu computadora. </p>
+                                    <p class="pointer-none text-gray-500 "><span class="text-sm">Selecciona tu imagen desde tu computadora solo da clic sobre la zona punteada. </p>
                                 </div>
                                 <input name="imagen" id="imagen" type="file" class="hidden">
                             </label>

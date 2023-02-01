@@ -16,8 +16,6 @@ class indexController extends controller
    
     public function home()
     {
-        return view('welcome');
-        $images = Imagen::all();
         return view('index');
     }
     public function directores()

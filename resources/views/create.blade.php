@@ -3,7 +3,11 @@
 
 @section('titulo','USAE Irapuato')
 @section('css')
-
+<style type="text/css">
+    a:link, a:visited, a:active {
+        text-decoration:none;
+    }
+</style>
 @endsection
 
 @section('content')
@@ -38,7 +42,7 @@
                                     <div class="flex flex-auto max-h-48 w-2/5 mx-auto -mt-10">
                                     <img class="has-mask h-36 object-center" src="https://img.freepik.com/free-vector/image-upload-concept-landing-page_52683-27130.jpg?size=338&ext=jpg" alt="freepik image">
                                     </div>
-                                    <p class="pointer-none text-gray-500 "><span class="text-sm">Arrastrar y suelta</span> imagenes aquí <br /> o <a href="" id="" class="text-blue-600 hover:underline"> selecciona tu imagen </a> desde tu computadora. </p>
+                                    <p class="pointer-none text-gray-500 "><span class="text-sm">Selecciona tu imagen desde tu computadora solo da clic sobre la zona punteada. </p>
                                 </div>
                                 <input name="imagen" id="imagen" type="file" class="hidden">
                             </label>
