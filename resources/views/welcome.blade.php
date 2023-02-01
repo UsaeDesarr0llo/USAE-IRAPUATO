@@ -44,7 +44,7 @@
           <img src="img/Imagen15.png" class="img-fluid" alt="..." width="60">
         </p>
         <p class="float-end mb-1">
-          <img src="img/Imagen90.png" class="img-fluid" alt="" width="850">
+          <img src="img/Imagen90.png" class="img-fluid" alt="" width="750">
         </p>
         <ul class="list-unstyled">
           <li><a href="" class="text-white"> </a></li>

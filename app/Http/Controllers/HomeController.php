@@ -18,9 +18,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $images = Imagen::paginate(3);
-        $img = Imagen::all();
-        return View('home', compact('images', 'img'));
+        return View('home');
     }
 
     /**
@@ -83,13 +81,44 @@ class HomeController extends Controller
                         ->with('success','Product deleted successfully');
     }
 
-     /**
-     * Show the application dashboard.
-     *
-     * @return \Illuminate\http\Response
-     */
+    /**
+    * Show the application dashboard.
+    *
+    * @return \Illuminate\http\Response
+    */
     public function Personal()
     {
         return view('Personal');
+    }
+
+    /**
+    * Show the application dashboard.
+    *
+    * @return \Illuminate\http\Response
+    */
+    public function Docente()
+    {
+        return view('Docente');
+    }
+
+    /**
+    * Show the application dashboard.
+    *
+    * @return \Illuminate\http\Response
+    */
+    public function Director()
+    {
+        return view('Director');
+    }
+
+    /**
+    * Show the application dashboard.
+    *
+    * @return \Illuminate\http\Response
+    */
+    public function avisos()
+    {
+        $images = Imagen::paginate(5);
+        return View('avisos', compact('images'));
     }
 }

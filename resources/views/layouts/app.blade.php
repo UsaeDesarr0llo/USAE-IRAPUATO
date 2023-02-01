@@ -269,9 +269,7 @@
                 </a>
                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="{{ route('welcome') }}">Inicio</a>
-                    <a class="dropdown-item" href="">Directores</a>
-                    <a class="dropdown-item" href="">Docentes</a>
-                    <a class="dropdown-item" href="{{ route('Personal') }}">Personal de Apoyo</a>
+                    <a class="dropdown-item" href="{{ route('home') }}">Vista Administrador</a>
                     <a class="dropdown-item" href="{{ route('logout') }}"
                         onclick="event.preventDefault();
                         document.getElementById('logout-form').submit();">
