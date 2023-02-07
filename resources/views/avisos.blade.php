@@ -39,11 +39,11 @@
                             <div class="flex justify-center rounded-lg text-lg" role="group">
                                 <a href="{{ route('edit', $image->id) }}" class="rounded bg-gray-500 hover:bg-gray-600 text-white font-bold py-2 px-4">Editar</a>
                                 <!-- botton borrar -->
-                                <form action="{{ route('destroy', $image->id) }}" method="POST" class="formEliminar">
+                                <!-- <form action="{{ route('destroy', $image->id) }}" method="POST" class="formEliminar">
                                     @csrf
                                     @method('DELETE')
                                     <button type="submit" class="rounded bg-pink-400 hover:bg-pink-500 text-white font-bold py-2 px-4">Borrar</button>
-                                </form>
+                                </form> -->
                             </div>
                         </td>
                     </tr>
@@ -56,7 +56,7 @@
         </div>
     </div>
 </div>         
-<script>
+<!-- <script>
     (function() {
   'use strict'
 
@@ -82,5 +82,5 @@
         }, false)
     })
 })()
-</script>
+</script> -->
 @endsection

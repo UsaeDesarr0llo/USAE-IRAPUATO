@@ -63,8 +63,9 @@
               <p class="card-text text-center">Control Escolar</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
-                  <a role ="button" class="btn btn-primary"href="pdf/control.pdf" target="_self">Ver</a>
-                  
+                @foreach ($theses as $key => $item)
+                  <a role ="button" class="btn btn-primary" href="{{ $item->url }}" target="_self">Ver</a>
+                @endforeach
                 </div>
                 <small class="text-muted"></small>
               </div>

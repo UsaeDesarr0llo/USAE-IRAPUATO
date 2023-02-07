@@ -1,53 +1,43 @@
-@extends('layouts.app')
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 
-@section('titulo','USAE Irapuato')
-@section('css')
-<style type="text/css">
-    a:link, a:visited, a:active {
-        text-decoration:none;
-    }
-</style>
-@endsection
+    <title>Hello, world!</title>
+  </head>
+  <body>
+      <div class="container">
+    <h1>Hello, world!</h1>
+    <button class="btn btn-primary mb-3" data-toggle="modal" data-target="#exampleModal">Nuevo</button>
+    <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Acciones</th>
+            <th scope="col">Titulo</th>
+            <th scope="col">Estado</th>
+           </tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <th scope="row"></th>
+                    <td width="25%">
+                        <button type="button" class="btn btn-info" onclick="">Ver</button>
+                        <button type="button" class="btn btn-success" onclick="" data-toggle="modal" data-target="#exampleModalEdit">Editar</button>
+                        <button type="button" class="btn btn-danger" onclick="">Eliminar</button>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
 
-@section('content')
-
-@if (session('status'))
-    <div class="alert alert-success" role="alert">
-        {{ session('status') }}
-    </div>
-@endif
-<div class="py-12">
-    <div class="max-w-7x1 mx-auto sm:px-6 lg:px-8">
-        <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
-        <a type="button" data-toggle="modal" data-target="#exampleModal" class="bg-indigo-500 px-12 py-2 rounded text-gray-200 font-semibold hover:bg-indigo-800 transition duration-200 each-in-out">Crear</a>
-            <table class="table-fixed w-full">
-                <thead>
-                    <tr class="bg-gray-800 text-white">
-                        <th class="border px-4 py-1">#</th>
-                        <th class="border px-4 py-1">Titulo</th>
-                        <th class="border px-4 py-1">Estado</th>
-                        <th class="border px-4 py-1">Acciones</th>
-                    </tr>
-                </thead>
-                <tbody>
-                @foreach ($theses as $key => $item)
-                    <tr>
-                        <td class="border px-4 py-1">{{ $key + 1 }}</td>
-                        <td class="border px-4 py-1">{{ $item->title }}</td>
-                        <td class="border px-4 py-1">{{ $item->state }}</td>
-                        <td class="border px-4 py-2">
-                            <div class="flex justify-center rounded-lg text-lg" role="group">
-                            <button type="button" class="btn btn-info" onclick="showFile('{{ $item->id }}')">Ver</button>
-                            <button type="button" class="btn btn-success" onclick="modalEdit('{{ $item->id }}','{{ $item->title }}','{{ $item->state }}','{{ $item->thesis_code }}')" data-toggle="modal" data-target="#exampleModalEdit">Editar</button>
-                            <button type="button" class="btn btn-danger" onclick="deleteThesis('{{ $item->id }}')">Eliminar</button>
-                            </div>
-                        </td>
-                    </tr>
-                @endforeach
-                </tbody>
-            </table>
-            <!-- Modal -->
+        </tbody>
+      </table>
+      <!-- Modal -->
         <form enctype="multipart/form-data" class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             @csrf
             <div class="modal-dialog">
@@ -113,10 +103,7 @@
                 </div>
             </div>
         </form>
-        </div>
-        </div>
     </div>
-</div>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
 
@@ -134,7 +121,7 @@
         $("#btn-register" ).click(function() {
             var formData = new FormData(document.getElementById("exampleModal"));
             $.ajax({
-                url: "{{ route('thesis_register') }}",
+                url: "",
                 type: "post",
                 dataType: "html",
                 data: formData,
@@ -166,7 +153,7 @@
         $( "#btn-update" ).click(function() {
             var formData = new FormData(document.getElementById("exampleModalEdit"));
             $.ajax({
-                url: "{{ route('thesis_update') }}",
+                url: "",
                 type: "post",
                 dataType: "html",
                 data: formData,
@@ -197,4 +184,5 @@
             });
         }
     </script>
-@endsection
+  </body>
+</html>

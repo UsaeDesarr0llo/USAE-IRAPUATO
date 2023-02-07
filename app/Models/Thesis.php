@@ -5,7 +5,13 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Director extends Model
+class Thesis extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'thesis_code',
+        'title',
+        'state'
+    ];
 }
