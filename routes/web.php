@@ -48,12 +48,9 @@ Route::get('/Personal', [App\Http\Controllers\HomeController::class, 'Personal']
 |
 */
 Route::get('/Director', [App\Http\Controllers\HomeController::class, 'Director'])->name('Director')->middleware('verified');
-
-Route::post('/thesis/register', [App\Http\Controllers\HomeController::class, 'stor'])->name('thesis_register')->middleware('verified');
-Route::get('/thesis/file/{id}', [App\Http\Controllers\HomeController::class, 'urlfile'])->name('thesis_file')->middleware('verified');
-Route::post('/thesis/update', [App\Http\Controllers\HomeController::class, 'updat'])->name('thesis_update')->middleware('verified');
-Route::get('/thesis/delete/{id}', [App\Http\Controllers\HomeController::class, 'destro'])->name('thesis_delete')->middleware('verified');
 Route::get('/createDirector', [App\Http\Controllers\HomeController::class, 'createDirector'])->name('createDirector')->middleware('verified');
+Route::post('EnvioDatos', [App\Http\Controllers\HomeController::class, 'Insertar'])->name('Insertar')->middleware('verified');
+Route::get('/editarDirector/{datos}', [App\Http\Controllers\HomeController::class, 'editar'])->name('editar')->middleware('verified');
 /*
 |--------------------------------------------------------------------------
 | Web Routes for admin (Docentes)

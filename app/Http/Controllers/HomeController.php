@@ -2,12 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Models\Imagen;
-use App\Models\Thesis;
-use App\Models\ThesisFile;
-use Illuminate\Support\Facades\Storage;
+use App\Models\Director;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Storage;
 
 class HomeController extends Controller
 {
@@ -137,102 +136,8 @@ class HomeController extends Controller
     */
     public function Director()
     {
-        $theses = Thesis::all();
-        return view('Director')->with('theses',$theses);
-    }
-
-    public function stor(Request $request){
-
-        $max_code = Thesis::select(
-            DB::raw(' (IFNULL(MAX(RIGHT(thesis_code,7)),0)) AS number_max')
-        )->first();
-
-        $year = date('Y');
-        $code = 'DOC'.$year.'-'.str_pad($max_code->number_max +1, 7, "0", STR_PAD_LEFT);
-
-        $thesis = Thesis::create([
-            'thesis_code' => $code,
-            'title' => $request->input('title'),
-            'state' => ($request->input('state')?$request->input('state'):0)
-        ]);
-
-        $file = $request->file('file');
-
-        if($file){
-            $filename = $file->getClientOriginalName();
-            $foo = \File::extension($filename);
-            if($foo == 'pdf'){
-                $route_file = $code.DIRECTORY_SEPARATOR.date('Ymdhmi').'.'.$foo;
-                Storage::disk('public')->put($route_file,\File::get($file));
-                ThesisFile::create([
-                    'thesis_id' => $thesis->id,
-                    'url' => $route_file,
-                    'name' => $filename
-                ]);
-                return response()->json(['response' => [
-                        'msg' => 'Registro Completado',
-                        ]
-                    ], 201);
-            }else{
-                return response()->json(['response' => [
-                    'msg' => 'Solo Archivos PDF',
-                    ]
-                ], 201);
-            }
-        }
-
-    }
-    public function urlfile($thesis_id){
-        $file = ThesisFile::where('thesis_id',$thesis_id)->where('state',1)->first();
-        return response()->json(['response' => [
-            'url' => $file->url,
-            'name' => $file->name,
-            ]
-        ], 201);
-    }
-
-    public function updat(Request $request){
-        $id = $request->input('thesis_id');
-        $code = $request->input('thesis_code');
-        Thesis::where('id',$id)->update([
-            'title' => $request->input('title'),
-            'state' => ($request->input('state')?$request->input('state'):0)
-        ]);
-
-        ThesisFile::where('thesis_id',$id)->update(['state'=>0]);
-
-        $file = $request->file('file');
-        if($file){
-            $filename = $file->getClientOriginalName();
-            $foo = \File::extension($filename);
-            if($foo == 'pdf'){
-                $route_file = $code.DIRECTORY_SEPARATOR.date('Ymdhmi').'.'.$foo;
-                Storage::disk('public')->put($route_file,\File::get($file));
-                ThesisFile::create([
-                    'thesis_id' => $id,
-                    'url' => $route_file,
-                    'name' => $filename
-                ]);
-                return response()->json(['response' => [
-                        'msg' => 'Se actualizo Correctamente',
-                        ]
-                    ], 201);
-            }else{
-                return response()->json(['response' => [
-                    'msg' => 'Solo Archivos PDF',
-                    ]
-                ], 201);
-            }
-        }
-
-    }
-
-    public function destro($id){
-        Thesis::where('id',$id)->delete();
-        return response()->json(['response' => [
-            'msg' => 'Eliminado correctamnete',
-            ]
-        ], 201);
+        $datos = Director::paginate(5);
+        return View('Director', compact('datos'));
     }
 
     /**
@@ -244,6 +149,40 @@ class HomeController extends Controller
     {
         return view('createDirector');
     }
+    /**
+    * Show the application dashboard.
+    *
+    * @return \Illuminate\http\Response
+    */
+    public function Insertar(Request $request)
+    {
+        try{
+            DB::beginTransaction();
+            $reg=new Director;
+            $reg->nombre=$request->get('nombre');
+            if($request->hasFile('pdf')){
+            $archivo=$request->file('pdf');
+            $archivo->move(public_path().'/Archivos/', $archivo->getClientOriginalName());
+            $reg->documento=$archivo->getClientOriginalName();
+            }
+            $reg->save();
+            DB::commit();
+        } catch (Exception $e){
+            DB::rollback();
+        }
+        return redirect()->route('home');
+    }
+
+    /**
+    * Show the application dashboard.
+    *
+    * @return \Illuminate\http\Response
+    */
+    public function editar(Director $datos)
+    {
+        return view('editarDirector', compact('datos'));
+    }
+    
 
     /**
     * Show the application dashboard.

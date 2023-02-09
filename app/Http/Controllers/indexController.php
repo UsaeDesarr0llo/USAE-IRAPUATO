@@ -20,9 +20,9 @@ class indexController extends controller
     {
         return view('index');
     }
-    public function directores()
+    public function directores(Request $request)
     {
-        $theses = ThesisFile::all();
+        $theses = Thesis::all();
         return view('directores')->with('theses',$theses);
     }
     public function docentes()
