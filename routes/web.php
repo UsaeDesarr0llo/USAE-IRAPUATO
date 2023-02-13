@@ -80,3 +80,4 @@ Route::get('/INF', [App\Http\Controllers\indexController::class,'INF']);
 Route::get('/PDPD', [App\Http\Controllers\indexController::class,'PDPD']);
 Route::get('/PL', [App\Http\Controllers\indexController::class,'PL']);
 Route::get('/SP', [App\Http\Controllers\indexController::class,'SP']);
+Route::post('/editarDirector', [App\Http\Controllers\indexController::class, 'update'])->name('update');

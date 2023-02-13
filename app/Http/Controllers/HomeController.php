@@ -156,20 +156,6 @@ class HomeController extends Controller
     */
     public function Insertar(Request $request)
     {
-        try{
-            DB::beginTransaction();
-            $reg=new Director;
-            $reg->nombre=$request->get('nombre');
-            if($request->hasFile('pdf')){
-            $archivo=$request->file('pdf');
-            $archivo->move(public_path().'/Archivos/', $archivo->getClientOriginalName());
-            $reg->documento=$archivo->getClientOriginalName();
-            }
-            $reg->save();
-            DB::commit();
-        } catch (Exception $e){
-            DB::rollback();
-        }
         return redirect()->route('home');
     }
 
