@@ -7,8 +7,6 @@ use Illuminate\Http\Request;
 use Illuminate\Routing\Controller as controller;
 use App\Models\Contador;
 use App\Models\Imagen;
-use App\Models\Thesis;
-use App\Models\ThesisFile;
 use Illuminate\Support\Facades\DB;
 
 
@@ -20,10 +18,9 @@ class indexController extends controller
     {
         return view('index');
     }
-    public function directores(Request $request)
+    public function directores()
     {
-        $theses = Thesis::all();
-        return view('directores')->with('theses',$theses);
+        return view('directores');
     }
     public function docentes()
     {

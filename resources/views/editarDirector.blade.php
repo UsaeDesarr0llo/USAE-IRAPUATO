@@ -20,19 +20,20 @@
 <div class="py-12">
     <div class="max-w-7x1 mx-auto sm:px-6 lg:px-8">
         <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
-        <form action="" method="POST" enctype="multipart/form-data">
+        <form action="{{ route('actualizar', $datos->id) }}" method="POST" enctype="multipart/form-data">
         @csrf
+        @method('POST')
         <div class="overflow-hidden shadow sm:rounded-md">
           <div class="bg-white px-4 py-5 sm:p-6">
             <div class="grid grid-cols-6 gap-6">
               <div class="col-span-6 sm:col-span-3">
                 <label for="first-name" class="block text-sm font-medium text-gray-700">Nombre</label>
-                <input value="{{$datos->nombre}}" class="form-control" type="text" name="nombre" disabled>  
+                <input value="{{$datos->nombre}}" class="form-control" type="text" name="nombre" id="nombre" readonly>  
             </div>
 
               <div class="col-span-6 sm:col-span-3">
                 <label for="last-name" class="block text-sm font-medium text-gray-700">Adjuntar Nuevo PDF</label>
-                <input type="file" name="pdf" class="form-control">
+                <input value="{{$datos->imagen}}" name="imagen" id="imagen" type="file" class="form-control">
               </div>
             </div>
           </div>
