@@ -51,6 +51,7 @@ Route::get('/Director', [App\Http\Controllers\HomeController::class, 'Director']
 Route::get('/createDirector', [App\Http\Controllers\HomeController::class, 'createDirector'])->name('createDirector')->middleware('verified');
 Route::post('EnvioDatos', [App\Http\Controllers\HomeController::class, 'Insertar'])->name('Insertar')->middleware('verified');
 Route::get('/editarDirector/{datos}', [App\Http\Controllers\HomeController::class, 'editar'])->name('editar')->middleware('verified');
+Route::post('/editarDirector/{datos}', [App\Http\Controllers\HomeController::class,'actualizar'])->name('actualizar')->middleware('verified');
 /*
 |--------------------------------------------------------------------------
 | Web Routes for admin (Docentes)

@@ -17,38 +17,24 @@
         {{ session('status') }}
     </div>
 @endif
-@method('POST')
-<!-- Modal -->
-<form enctype="multipart/form-data" class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="py-12">
+    <div class="max-w-7x1 mx-auto sm:px-6 lg:px-8">
+        <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
+        <form action="{{ route('actualizar', $datos->id) }}" method="POST" enctype="multipart/form-data">
+        @csrf
+        @method('POST')
+        <div class="overflow-hidden shadow sm:rounded-md">
+          <div class="bg-white px-4 py-5 sm:p-6">
+            <div class="grid grid-cols-6 gap-6">
+              <div class="col-span-6 sm:col-span-3">
+                <label for="first-name" class="block text-sm font-medium text-gray-700">Nombre</label>
+                <input value="{{$datos->nombre}}" class="form-control" type="text" name="nombre" id="nombre" readonly>  
+            </div>
 
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Nueva Tesis</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="form-group">
-                            <label for="title">Titulo</label>
-                            <input type="text" class="form-control" id="title" name="title">
-
-                        </div>
-                        <div class="form-group">
-                            <label for="exampleFormControlFile1">Archivo</label>
-                            <input type="file" class="form-control-file" id="exampleFormControlFile1" name="file">
-                          </div>
-                        <div class="form-group form-check">
-                            <input type="checkbox" value="1" checked class="form-check-input" id="exampleCheck1" name="state">
-                            <label class="form-check-label" for="exampleCheck1">Activo</label>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                        <button type="button" class="btn btn-primary" id="btn-register">Guardar</button>
-                    </div>
-                </div>
+              <div class="col-span-6 sm:col-span-3">
+                <label for="last-name" class="block text-sm font-medium text-gray-700">Adjuntar Nuevo PDF</label>
+                <input value="{{$datos->imagen}}" name="imagen" id="imagen" type="file" class="form-control">
+              </div>
             </div>
         </form>
         <form enctype="multipart/form-data" class="modal fade" id="exampleModalEdit" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">

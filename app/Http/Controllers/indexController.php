@@ -38,6 +38,7 @@ class indexController extends controller
 
     public function update(){
         
+        return view('directores');
     }
     public function docentes()
     {

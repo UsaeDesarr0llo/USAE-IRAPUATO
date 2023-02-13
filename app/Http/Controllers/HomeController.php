@@ -23,6 +23,17 @@ class HomeController extends Controller
         return View('home');
     }
 
+        /**
+    * Show the application dashboard.
+    *
+    * @return \Illuminate\http\Response
+    */
+    public function avisos()
+    {
+        $images = Imagen::paginate(5);
+        return View('avisos', compact('images'));
+    }
+
     /**
      * Show the application dashboard.
      *
@@ -156,7 +167,22 @@ class HomeController extends Controller
     */
     public function Insertar(Request $request)
     {
-        return redirect()->route('home');
+
+        $request->validate([
+            'imagen' => 'required|file|mimes:pdf,xlsx,docx,csv|max:2048'
+        ]);
+        $images = $request->all();
+
+        if($imagen = $request->file('imagen')) {
+            $rutaGuardarImg = 'Archivos/';
+            $imagenProducto = date('YmdHis').".". $imagen->getClientOriginalExtension();
+            $imagen->move($rutaGuardarImg, $imagenProducto);
+            $images['imagen'] = "$imagenProducto";
+        }
+
+        Director::create($images);
+        return redirect()->route('Director');
+
     }
 
     /**
@@ -168,16 +194,29 @@ class HomeController extends Controller
     {
         return view('editarDirector', compact('datos'));
     }
-    
 
     /**
     * Show the application dashboard.
     *
     * @return \Illuminate\http\Response
     */
-    public function avisos()
+    public function actualizar(Request $request, Director $datos)
     {
-        $images = Imagen::paginate(5);
-        return View('avisos', compact('images'));
+        $request->validate([
+            'imagen' => 'required|file|mimes:pdf,xlsx,docx,csv|max:2048'
+        ]);
+
+
+        $prod = $request->all();
+         if($imagen = $request->file('imagen')){
+            $rutaGuardarImg = 'Archivos/';
+            $imagenProducto = date('YmdHis') . "." . $imagen->getClientOriginalExtension(); 
+            $imagen->move($rutaGuardarImg, $imagenProducto);
+            $prod['imagen'] = "$imagenProducto";
+         }else{
+            unset($prod['imagen']);
+         }
+        $datos->update($prod);
+        return redirect()->route('Director');
     }
 }

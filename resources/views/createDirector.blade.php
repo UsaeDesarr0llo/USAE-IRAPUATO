@@ -27,12 +27,12 @@
             <div class="grid grid-cols-6 gap-6">
               <div class="col-span-6 sm:col-span-3">
                 <label for="first-name" class="block text-sm font-medium text-gray-700">Nombre</label>
-                <input  type="text" name="nombre" class="form-control">
+                <input  type="text" name="nombre" id="nombre" class="form-control">
               </div>
 
               <div class="col-span-6 sm:col-span-3">
                 <label for="last-name" class="block text-sm font-medium text-gray-700">Adjuntar PDF</label>
-                <input type="file" name="pdf" class="form-control">
+                <input class="form-control" name="imagen" id="imagen" type="file">
               </div>
             </div>
           </div>
