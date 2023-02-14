@@ -17,7 +17,7 @@
       <div class="col-lg-6 col-md-8 mx-auto">
         <h1 class="text-white">UNIDAD DE SERVICIOS DE APOYO A LA  EDUCACIÓN.</h1> <br>
         <h2 class="text-white">IRAPUATO</h2>
-        <p class="lead text-muted">Delagación Regional de Educacion IV Irapuato</p>
+        <p class="lead text-white">Delagación Regional de Educacion IV Irapuato</p>
         <h3 class="text-white">Docentes</h3>
         
       </div>

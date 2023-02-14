@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Models\Imagen;
 use App\Models\Director;
+use App\Models\Personal;
+use App\Models\prestacionesEstatal;
+use App\Models\prestacionesFederal;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
@@ -127,7 +130,237 @@ class HomeController extends Controller
     */
     public function Personal()
     {
-        return view('Personal');
+        $dato = Personal::paginate(5);
+        return View('Personal', compact('dato'));
+    }
+
+    /**
+    * Show the application dashboard.
+    *
+    * @return \Illuminate\http\Response
+    */
+    public function createPersonal()
+    {
+        return view('createPersonal');
+    }
+    /**
+    * Show the application dashboard.
+    *
+    * @return \Illuminate\http\Response
+    */
+    public function Inserta(Request $request)
+    {
+
+        $request->validate([
+            'pdf' => 'required|file|mimes:pdf,xlsx,docx,csv|max:2048'
+        ]);
+        $dato = $request->all();
+
+        if($imagen = $request->file('pdf')) {
+            $rutaGuardarImg = 'Archivos/';
+            $imagenProducto = date('YmdHis').".". $imagen->getClientOriginalExtension();
+            $imagen->move($rutaGuardarImg, $imagenProducto);
+            $dato['pdf'] = "$imagenProducto";
+        }
+
+        Personal::create($dato);
+        return redirect()->route('Personal');
+
+    }
+
+    /**
+    * Show the application dashboard.
+    *
+    * @return \Illuminate\http\Response
+    */
+    public function edita(Personal $dato)
+    {
+        return view('editarPersonal', compact('dato'));
+    }
+
+    /**
+    * Show the application dashboard.
+    *
+    * @return \Illuminate\http\Response
+    */
+    public function actualiza(Request $request, Personal $dato)
+    {
+        $request->validate([
+            'pdf' => 'required|file|mimes:pdf,xlsx,docx,csv|max:2048'
+        ]);
+
+
+        $prod = $request->all();
+         if($imagen = $request->file('pdf')){
+            $rutaGuardarImg = 'Archivos/';
+            $imagenProducto = date('YmdHis') . "." . $imagen->getClientOriginalExtension(); 
+            $imagen->move($rutaGuardarImg, $imagenProducto);
+            $prod['pdf'] = "$imagenProducto";
+         }else{
+            unset($prod['pdf']);
+         }
+        $dato->update($prod);
+        return redirect()->route('Personal');
+    }
+
+    /**
+    * Show the application dashboard.
+    *
+    * @return \Illuminate\http\Response
+    */
+    public function prestacionesEstatal()
+    {
+        $date = prestacionesEstatal::paginate(12);
+        return view('prestacionesEstatal', compact('date'));
+    }
+
+    /**
+    * Show the application dashboard.
+    *
+    * @return \Illuminate\http\Response
+    */
+    public function createprestacionesEstatal()
+    {
+        return view('createprestacionesEstatal');
+    }
+    /**
+    * Show the application dashboard.
+    *
+    * @return \Illuminate\http\Response
+    */
+    public function Inserte(Request $request)
+    {
+
+        $request->validate([
+            'pdf' => 'required|file|mimes:pdf,xlsx,docx,csv|max:2048'
+        ]);
+        $date = $request->all();
+
+        if($imagen = $request->file('pdf')) {
+            $rutaGuardarImg = 'Archivos/';
+            $imagenProducto = date('YmdHis').".". $imagen->getClientOriginalExtension();
+            $imagen->move($rutaGuardarImg, $imagenProducto);
+            $date['pdf'] = "$imagenProducto";
+        }
+
+        prestacionesEstatal::create($date);
+        return redirect()->route('prestacionesEstatal');
+
+    }
+
+    /**
+    * Show the application dashboard.
+    *
+    * @return \Illuminate\http\Response
+    */
+    public function edite(prestacionesEstatal $date)
+    {
+        return view('editarprestacionesEstatal', compact('date'));
+    }
+
+    /**
+    * Show the application dashboard.
+    *
+    * @return \Illuminate\http\Response
+    */
+    public function actualize(Request $request, prestacionesEstatal $date)
+    {
+        $request->validate([
+            'pdf' => 'required|file|mimes:pdf,xlsx,docx,csv|max:2048'
+        ]);
+
+
+        $prod = $request->all();
+         if($imagen = $request->file('pdf')){
+            $rutaGuardarImg = 'Archivos/';
+            $imagenProducto = date('YmdHis') . "." . $imagen->getClientOriginalExtension(); 
+            $imagen->move($rutaGuardarImg, $imagenProducto);
+            $prod['pdf'] = "$imagenProducto";
+         }else{
+            unset($prod['pdf']);
+         }
+        $date->update($prod);
+        return redirect()->route('prestacionesEstatal');
+    }
+
+    /**
+    * Show the application dashboard.
+    *
+    * @return \Illuminate\http\Response
+    */
+    public function prestacionesFederal()
+    {
+        $dat = prestacionesFederal::paginate(12);
+        return view('prestacionesFederal', compact('dat'));
+    }
+
+    /**
+    * Show the application dashboard.
+    *
+    * @return \Illuminate\http\Response
+    */
+    public function createprestacionesFederal()
+    {
+        return view('createprestacionesFederal');
+    }
+    /**
+    * Show the application dashboard.
+    *
+    * @return \Illuminate\http\Response
+    */
+    public function Inserto(Request $request)
+    {
+
+        $request->validate([
+            'pdf' => 'required|file|mimes:pdf,xlsx,docx,csv|max:2048'
+        ]);
+        $dat = $request->all();
+
+        if($imagen = $request->file('pdf')) {
+            $rutaGuardarImg = 'Archivos/';
+            $imagenProducto = date('YmdHis').".". $imagen->getClientOriginalExtension();
+            $imagen->move($rutaGuardarImg, $imagenProducto);
+            $dat['pdf'] = "$imagenProducto";
+        }
+
+        prestacionesFederal::create($dat);
+        return redirect()->route('prestacionesFederal');
+
+    }
+
+    /**
+    * Show the application dashboard.
+    *
+    * @return \Illuminate\http\Response
+    */
+    public function edito(prestacionesFederal $dat)
+    {
+        return view('editarprestacionesFederal', compact('dat'));
+    }
+
+    /**
+    * Show the application dashboard.
+    *
+    * @return \Illuminate\http\Response
+    */
+    public function actualizo(Request $request, prestacionesFederal $dat)
+    {
+        $request->validate([
+            'pdf' => 'required|file|mimes:pdf,xlsx,docx,csv|max:2048'
+        ]);
+
+
+        $prod = $request->all();
+         if($imagen = $request->file('pdf')){
+            $rutaGuardarImg = 'Archivos/';
+            $imagenProducto = date('YmdHis') . "." . $imagen->getClientOriginalExtension(); 
+            $imagen->move($rutaGuardarImg, $imagenProducto);
+            $prod['pdf'] = "$imagenProducto";
+         }else{
+            unset($prod['pdf']);
+         }
+        $dat->update($prod);
+        return redirect()->route('prestacionesFederal');
     }
 
     /**
@@ -147,7 +380,7 @@ class HomeController extends Controller
     */
     public function Director()
     {
-        $datos = Director::paginate(5);
+        $datos = Director::paginate(13);
         return View('Director', compact('datos'));
     }
 

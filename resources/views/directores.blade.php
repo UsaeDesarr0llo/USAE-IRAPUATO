@@ -19,7 +19,7 @@
       <div class="col-lg-6 col-md-8 mx-auto">
         <h1 class="text-white">UNIDAD DE SERVICIOS DE APOYO A LA  EDUCACIÓN.</h1> <br>
         <h2 class="text-white">IRAPUATO</h2>
-        <p class="lead text-muted">Delagación Regional de Educacion IV Irapuato</p>
+        <p class="lead text-white">Delagación Regional de Educacion IV Irapuato</p>
         <h3 class="text-white">Directores</h3>
         
       </div>
@@ -43,8 +43,9 @@
               <p class="card-text text-center">Consejos de Participación</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
-                  <a role="button" class="btn btn-primary"href="pdf/consejos.pdf" target="_self">Ver</a>
-                  
+                  @foreach ($pdfDoc1 as $Doc1)
+                    <a role="button" target="_blank" class="btn btn-primary" href="Archivos/{{$Doc1->imagen}}" target="_self">Ver</a>
+                  @endforeach
                 </div>
                 <small class="text-muted"></small>
               </div>
@@ -63,7 +64,9 @@
               <p class="card-text text-center">Control Escolar</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
-                  <a role ="button" class="btn btn-primary" href="" target="_self">Ver</a>
+                  @foreach ($pdfDoc2 as $Doc2)
+                    <a role="button" target="_blank" class="btn btn-primary" href="Archivos/{{$Doc2->imagen}}" target="_self">Ver</a>
+                  @endforeach
                 </div>
                 <small class="text-muted"></small>
               </div>
@@ -81,8 +84,9 @@
               <p class="card-text text-center">Correo Electrónico Institucional </p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
-                  <a role ="button" class="btn btn-primary"href="pdf/correo.pdf" target="_self">Ver</a>
-                  
+                  @foreach ($pdfDoc3 as $Doc3)
+                    <a role="button" target="_blank" class="btn btn-primary" href="Archivos/{{$Doc3->imagen}}" target="_self">Ver</a>
+                  @endforeach
                 </div>
                 <small class="text-muted"></small>
               </div>
@@ -101,9 +105,9 @@
               <p class="card-text text-center">Cuenta Personal de Correo Electrónico</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
-                  <a role ="button" class="btn btn-primary"href="pdf/cuenta.pdf" target="_self">Ver</a>
-                  
-                  
+                  @foreach ($pdfDoc4 as $Doc4)
+                    <a role="button" target="_blank" class="btn btn-primary" href="Archivos/{{$Doc4->imagen}}" target="_self">Ver</a>
+                  @endforeach
                 </div>
                 <small class="text-muted"></small>
               </div>
@@ -121,8 +125,9 @@
               <p class="card-text text-center">Entrega Recepción</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
-                    <a role ="button" class="btn btn-primary"href="pdf/entrega.pdf" target="_self">Ver</a>
-                  
+                  @foreach ($pdfDoc5 as $Doc5)
+                    <a role="button" target="_blank" class="btn btn-primary" href="Archivos/{{$Doc5->imagen}}" target="_self">Ver</a>
+                  @endforeach
                 </div>
                 <small class="text-muted"></small>
               </div>
@@ -139,8 +144,9 @@
               <p class="card-text text-center">Mantenimiento Infraestructura Escolar</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
-                    <a role ="button" class="btn btn-primary"href="pdf/mantenimiento.pdf" target="_self">Ver</a>
-                  
+                  @foreach ($pdfDoc6 as $Doc6)
+                    <a role="button" target="_blank" class="btn btn-primary" href="Archivos/{{$Doc6->imagen}}" target="_self">Ver</a>
+                  @endforeach
                 </div>
                 <small class="text-muted"></small>
               </div>
@@ -158,8 +164,9 @@
               <p class="card-text text-center">Sistema de Ingresos y Egresos Escolares</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
-                    <a role ="button" class="btn btn-primary"href="pdf/sistema.pdf" target="_self">Ver</a>
-                  
+                  @foreach ($pdfDoc7 as $Doc7)
+                    <a role="button" target="_blank" class="btn btn-primary" href="Archivos/{{$Doc7->imagen}}" target="_self">Ver</a>
+                  @endforeach
                 </div>
                 <small class="text-muted"></small>
               </div>
@@ -177,8 +184,9 @@
               <p class="card-text text-center">Sistema de Inventarios</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
-                    <a role ="button" class="btn btn-primary"href="pdf/inventario.pdf" target="_self">Ver</a>
-                  
+                  @foreach ($pdfDoc8 as $Doc8)
+                    <a role="button" target="_blank" class="btn btn-primary" href="Archivos/{{$Doc8->imagen}}" target="_self">Ver</a>
+                  @endforeach
                 </div>
                 <small class="text-muted"></small>
               </div>
@@ -195,8 +203,9 @@
               <p class="card-text text-center">Libros de Texto Gratuitos</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
-                  <a role ="button" class="btn btn-primary"href="pdf/libros.pdf" target="_self">Ver</a>
-                  
+                  @foreach ($pdfDoc9 as $Doc9)
+                    <a role="button" target="_blank" class="btn btn-primary" href="Archivos/{{$Doc9->imagen}}" target="_self">Ver</a>
+                  @endforeach
                 </div>
                 <small class="text-muted"></small>
               </div>
@@ -213,8 +222,9 @@
               <p class="card-text text-center">Aprender a Convivir</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
-                  <a role ="button" class="btn btn-primary"href="pdf/aprender.pdf" target="_self">Ver</a>
-                  
+                  @foreach ($pdfDoc10 as $Doc10)
+                    <a role="button" target="_blank" class="btn btn-primary" href="Archivos/{{$Doc10->imagen}}" target="_self">Ver</a>
+                  @endforeach
                 </div>
                 <small class="text-muted"></small>
               </div>
@@ -231,8 +241,9 @@
               <p class="card-text text-center">Procedimiento ante siniestros</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
-                  <a role ="button" class="btn btn-primary"href="pdf/procedimientos.pdf" target="_self">Ver</a>
-                  
+                  @foreach ($pdfDoc11 as $Doc11)
+                    <a role="button" target="_blank" class="btn btn-primary" href="Archivos/{{$Doc11->imagen}}" target="_self">Ver</a>
+                  @endforeach
                 </div>
                 <small class="text-muted"></small>
               </div>
@@ -249,8 +260,9 @@
               <p class="card-text text-center">Solicitud Personal</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
-                  <a role ="button" class="btn btn-primary"href="pdf/solicitud.pdf" target="_self">Ver</a>
-                  
+                  @foreach ($pdfDoc12 as $Doc12)
+                    <a role="button" target="_blank" class="btn btn-primary" href="Archivos/{{$Doc12->imagen}}" target="_self">Ver</a>
+                  @endforeach
                 </div>
                 <small class="text-muted"></small>
               </div>
@@ -267,8 +279,9 @@
               <p class="card-text text-center">Licencias Médicas</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
-                  <a role ="button" class="btn btn-primary"href="pdf/Licencias.pdf" target="_self">Ver</a>
-                  
+                  @foreach ($pdfDoc13 as $Doc13)
+                    <a role="button" target="_blank" class="btn btn-primary" href="Archivos/{{$Doc13->imagen}}" target="_self">Ver</a>
+                  @endforeach
                 </div>
                 <small class="text-muted"></small>
               </div>
@@ -284,4 +297,4 @@
 
 @include('includes.footer')
 
-    @endsection
+@endsection

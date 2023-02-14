@@ -20,8 +20,10 @@
 <div class="py-12">
     <div class="max-w-7x1 mx-auto sm:px-6 lg:px-8">
         <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
-        <center><h3>Directores</h3></center>
-        <a type="button" href="{{ route('createDirector') }}" class="bg-indigo-500 px-12 py-2 rounded text-gray-200 font-semibold hover:bg-indigo-800 transition duration-200 each-in-out">Crear</a>
+        <center><h3>Prestaciones Plaza Estatal</h3></center>
+        <a type="button" href="{{ route('createprestacionesEstatal') }}" class="bg-indigo-500 px-12 py-2 rounded text-gray-200 font-semibold hover:bg-indigo-800 transition duration-200 each-in-out">Crear</a>
+        <a type="button" href="{{ route('Personal') }}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded">Personal de Apoyo</a>
+        <a type="button" href="{{ route('prestacionesFederal') }}" class="rounded bg-pink-400 hover:bg-pink-500 text-white font-bold py-2 px-2">Prestaciones Plaza Federal</a>
             <table class="table-fixed w-full">
                 <thead>
                     <tr class="bg-gray-800 text-white">
@@ -30,13 +32,13 @@
                     </tr>
                 </thead>
                 <tbody>
-                @foreach ($datos as $d)
+                @foreach ($date as $d)
                     <tr>
                         <td class="border px-4 py-1">{{$d->nombre}}</td>
                         <td class="border px-4 py-2">
                             <div class="flex justify-center rounded-lg text-lg" role="group">
-                                <a href="Archivos/{{$d->imagen}}" target="_blank" class="rounded bg-gray-500 hover:bg-gray-600 text-white font-bold py-2 px-2">Ver Documento</a>
-                                <a href="{{ route('editar', $d->id) }}" class="rounded bg-pink-400 hover:bg-pink-500 text-white font-bold py-2 px-2">Editar</a>
+                                <a href="Archivos/{{$d->pdf}}" target="_blank" class="rounded bg-gray-500 hover:bg-gray-600 text-white font-bold py-2 px-2">Ver Documento</a>
+                                <a href="{{ route('edite', $d->id) }}" class="rounded bg-pink-400 hover:bg-pink-500 text-white font-bold py-2 px-2">Editar</a>
                             </div>
                         </td>
                     </tr>

@@ -41,6 +41,32 @@ Route::delete('/{images}',[App\Http\Controllers\HomeController::class,'destroy']
 |
 */
 Route::get('/Personal', [App\Http\Controllers\HomeController::class, 'Personal'])->name('Personal')->middleware('verified');
+Route::get('/createPersonal', [App\Http\Controllers\HomeController::class, 'createPersonal'])->name('createPersonal')->middleware('verified');
+Route::post('/createPersonal', [App\Http\Controllers\HomeController::class, 'Inserta'])->name('Inserta')->middleware('verified');
+Route::get('/editarPersonal/{dato}', [App\Http\Controllers\HomeController::class, 'edita'])->name('edita')->middleware('verified');
+Route::post('/editarPersonal/{dato}', [App\Http\Controllers\HomeController::class,'actualiza'])->name('actualiza')->middleware('verified');
+/*
+|--------------------------------------------------------------------------
+| Web Routes for admin (Personal Prestaciones Estatales)
+|--------------------------------------------------------------------------
+|
+*/
+Route::get('/prestacionesEstatal', [App\Http\Controllers\HomeController::class, 'prestacionesEstatal'])->name('prestacionesEstatal')->middleware('verified');
+Route::get('/createprestacionesEstatal', [App\Http\Controllers\HomeController::class, 'createprestacionesEstatal'])->name('createprestacionesEstatal')->middleware('verified');
+Route::post('/createprestacionesEstatal', [App\Http\Controllers\HomeController::class, 'Inserte'])->name('Inserte')->middleware('verified');
+Route::get('/editarprestacionesEstatal/{date}', [App\Http\Controllers\HomeController::class, 'edite'])->name('edite')->middleware('verified');
+Route::post('/editarprestacionesEstatal/{date}', [App\Http\Controllers\HomeController::class,'actualize'])->name('actualize')->middleware('verified');
+/*
+|--------------------------------------------------------------------------
+| Web Routes for admin (Personal Prestaciones Federales)
+|--------------------------------------------------------------------------
+|
+*/
+Route::get('/prestacionesFederal', [App\Http\Controllers\HomeController::class, 'prestacionesFederal'])->name('prestacionesFederal')->middleware('verified');
+Route::get('/createprestacionesFederal', [App\Http\Controllers\HomeController::class, 'createprestacionesFederal'])->name('createprestacionesFederal')->middleware('verified');
+Route::post('/createprestacionesFederal', [App\Http\Controllers\HomeController::class, 'Inserto'])->name('Inserto')->middleware('verified');
+Route::get('/editarprestacionesFederal/{dat}', [App\Http\Controllers\HomeController::class, 'edito'])->name('edito')->middleware('verified');
+Route::post('/editarprestacionesFederal/{dat}', [App\Http\Controllers\HomeController::class,'actualizo'])->name('actualizo')->middleware('verified');
 /*
 |--------------------------------------------------------------------------
 | Web Routes for admin (Directores)

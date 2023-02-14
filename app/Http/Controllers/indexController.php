@@ -20,7 +20,20 @@ class indexController extends controller
     }
     public function directores()
     {
-        return view('directores');
+        $pdfDoc1 = DB::select('select id, imagen from directors where id = 1');
+        $pdfDoc2 = DB::select('select id, imagen from directors where id = 2');
+        $pdfDoc3 = DB::select('select id, imagen from directors where id = 3');
+        $pdfDoc4 = DB::select('select id, imagen from directors where id = 4');
+        $pdfDoc5 = DB::select('select id, imagen from directors where id = 5');
+        $pdfDoc6 = DB::select('select id, imagen from directors where id = 6');
+        $pdfDoc7 = DB::select('select id, imagen from directors where id = 7');
+        $pdfDoc8 = DB::select('select id, imagen from directors where id = 8');
+        $pdfDoc9 = DB::select('select id, imagen from directors where id = 9');
+        $pdfDoc10 = DB::select('select id, imagen from directors where id = 10');
+        $pdfDoc11 = DB::select('select id, imagen from directors where id = 11');
+        $pdfDoc12 = DB::select('select id, imagen from directors where id = 12');
+        $pdfDoc13 = DB::select('select id, imagen from directors where id = 13');
+        return view('directores', compact('pdfDoc1','pdfDoc2','pdfDoc3','pdfDoc4','pdfDoc5','pdfDoc6','pdfDoc7','pdfDoc8','pdfDoc9','pdfDoc10','pdfDoc11','pdfDoc12','pdfDoc13'));
     }
     public function docentes()
     {
@@ -28,7 +41,12 @@ class indexController extends controller
     }
     public function personalApoyo()
     {
-        return view('personalApoyo');
+        $pdfDo1 = DB::select('select id, pdf from personals where id = 1');
+        $pdfDo2 = DB::select('select id, pdf from personals where id = 2');
+        $pdfDo3 = DB::select('select id, pdf from personals where id = 3');
+        $pdfDo4 = DB::select('select id, pdf from personals where id = 4');
+        $pdfDo5 = DB::select('select id, pdf from personals where id = 5');
+        return view('personalApoyo', compact('pdfDo1','pdfDo2','pdfDo3','pdfDo4','pdfDo5'));
     }
     public function personalUSAE()
     {

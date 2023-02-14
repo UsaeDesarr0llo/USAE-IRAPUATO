@@ -16,7 +16,7 @@
       <div class="col-lg-6 col-md-8 mx-auto">
         <h1 class="text-white">UNIDAD DE SERVICIOS DE APOYO A LA  EDUCACIÓN.</h1> <br>
         <h2 class="text-white">IRAPUATO</h2>
-        <p class="lead text-muted">Delagación Regional de Educacion IV Irapuato</p>
+        <p class="lead text-white">Delagación Regional de Educacion IV Irapuato</p>
         <h3 class="text-white">Personal de Apoyo</h3>
         
       </div>
@@ -37,8 +37,9 @@
               <p class="card-text text-center">Credencial Institucional</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
-                  <a role="button" class="btn btn-primary"href="pdf/credencial institucional2.pdf" target="_self">Ver</a>
-                  
+                  @foreach ($pdfDo1 as $Doc1)
+                    <a role="button" target="_blank" class="btn btn-primary" href="Archivos/{{$Doc1->pdf}}" target="_self">Ver</a>
+                  @endforeach
                 </div>
                 <small class="text-muted"></small>
               </div>
@@ -56,8 +57,9 @@
               <p class="card-text text-center">Cuenta de Correo Electrónico Institucional </p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
-                  <a role ="button" class="btn btn-primary"href="pdf/Cuenta correo electronico institucional2.pdf" target="_self">Ver</a>
-                  
+                  @foreach ($pdfDo2 as $Doc2)
+                    <a role="button" target="_blank" class="btn btn-primary" href="Archivos/{{$Doc2->pdf}}" target="_self">Ver</a>
+                  @endforeach
                 </div>
                 <small class="text-muted"></small>
               </div>
@@ -157,9 +159,9 @@
               <p class="card-text text-center">Comprobantes de Nomina</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
-                  <a role ="button" class="btn btn-primary"href="pdf/Comprobantes de nómina vistapersonalApoyo.pdf" target="_self">Ver</a>
-                  
-                  
+                  @foreach ($pdfDo3 as $Doc3)
+                    <a role="button" target="_blank" class="btn btn-primary" href="Archivos/{{$Doc3->pdf}}" target="_self">Ver</a>
+                  @endforeach
                 </div>
                 <small class="text-muted"></small>
               </div>
@@ -204,9 +206,9 @@
                 <p class="card-text text-center">Carrera Administrativa Para La Calidad</p>
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="btn-group">
-                    <a role ="button" class="btn btn-primary"href="pdf/Carrera administrativa vistapersonalApoyo.pdf" target="_self">Ver</a>
-                    
-                    
+                  @foreach ($pdfDo4 as $Doc4)
+                    <a role="button" target="_blank" class="btn btn-primary" href="Archivos/{{$Doc4->pdf}}" target="_self">Ver</a>
+                  @endforeach
                   </div>
                   <small class="text-muted"></small>
                 </div>
@@ -225,9 +227,9 @@
                 <p class="card-text text-center">Evaluación al Desempeño</p>
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="btn-group">
-                    <a role ="button" class="btn btn-primary"href="pdf/Evaluación al desempeño vistapersonalApoyo.pdf" target="_self">Ver</a>
-                    
-                    
+                  @foreach ($pdfDo5 as $Doc5)
+                    <a role="button" target="_blank" class="btn btn-primary" href="Archivos/{{$Doc5->pdf}}" target="_self">Ver</a>
+                  @endforeach
                   </div>
                   <small class="text-muted"></small>
                 </div>
