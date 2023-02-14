@@ -26,8 +26,9 @@
               <p class="card-text text-center">SERVICIO MÉDICO ISSSTE</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
-                  <a role="button" class="btn btn-primary"href="pdf/servicio.pdf" target="_self">Ver</a>
-                  
+                  @foreach ($pdfE1 as $pdf)
+                  <a role="button" target="_blank" class="btn btn-primary" href="Archivos/{{$pdf->imagen}}" target="_self">Ver</a>
+                  @endforeach
                 </div>
                 <small class="text-muted"></small>
               </div>
@@ -45,8 +46,9 @@
               <p class="card-text text-center">ISSEG</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
-                  <a role ="button" class="btn btn-primary"href="pdf/isseg.pdf" target="_self">Ver</a>
-                  
+                  @foreach ($pdfE2 as $pdf1)
+                  <a role="button" target="_blank" class="btn btn-primary" href="Archivos/{{$pdf1->imagen}}" target="_self">Ver</a>
+                  @endforeach
                 </div>
                 <small class="text-muted"></small>
               </div>
@@ -65,8 +67,9 @@
                 <p class="card-text text-center">FORTE</p>
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="btn-group">
-                    <a role ="button" class="btn btn-primary"href="pdf/forte.pdf" target="_self">Ver</a>
-                    
+                  @foreach ($pdfE3 as $pdf2)
+                  <a role="button" target="_blank" class="btn btn-primary" href="Archivos/{{$pdf2->imagen}}" target="_self">Ver</a>
+                  @endforeach
                   </div>
                   <small class="text-muted"></small>
                 </div>
@@ -85,8 +88,9 @@
                 <p class="card-text text-center">PRÉSTAMOS PERSONALES</p>
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="btn-group">
-                    <a role ="button" class="btn btn-primary"href="pdf/prestamos.pdf" target="_self">Ver</a>
-                    
+                  @foreach ($pdfE4 as $pdf3)
+                  <a role="button" target="_blank" class="btn btn-primary" href="Archivos/{{$pdf3->imagen}}" target="_self">Ver</a>
+                  @endforeach
                   </div>
                   <small class="text-muted"></small>
                 </div>
@@ -105,8 +109,9 @@
                 <p class="card-text text-center">DESIGNACIÓN DE BENEFICIARIOS</p>
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="btn-group">
-                    <a role ="button" class="btn btn-primary"href="pdf/designación.pdf" target="_self">Ver</a>
-                    
+                  @foreach ($pdfE5 as $pdf4)
+                  <a role="button" target="_blank" class="btn btn-primary" href="Archivos/{{$pdf4->imagen}}" target="_self">Ver</a>
+                  @endforeach
                   </div>
                   <small class="text-muted"></small>
                 </div>
@@ -125,8 +130,9 @@
                 <p class="card-text text-center">NÓMINA ELECTRÓNICA</p>
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="btn-group">
-                    <a role ="button" class="btn btn-primary"href="pdf/nómina.pdf" target="_self">Ver</a>
-                    
+                  @foreach ($pdfE6 as $pdf5)
+                  <a role="button" target="_blank" class="btn btn-primary" href="Archivos/{{$pdf5->imagen}}" target="_self">Ver</a>
+                  @endforeach
                   </div>
                   <small class="text-muted"></small>
                 </div>
@@ -145,8 +151,9 @@
               <p class="card-text text-center">VACACIONES Y AGUINALDO</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
-                  <a role ="button" class="btn btn-primary"href="pdf/vacaciones.pdf" target="_self">Ver</a>
-                  
+                  @foreach ($pdfE7 as $pdf6)
+                  <a role="button" target="_blank" class="btn btn-primary" href="Archivos/{{$pdf6->imagen}}" target="_self">Ver</a>
+                  @endforeach
                 </div>
                 <small class="text-muted"></small>
               </div>

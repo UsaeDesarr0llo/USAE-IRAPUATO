@@ -44,7 +44,7 @@
                     <div class="d-flex justify-content-between align-items-center">
                       <div class="btn-group">
                       @foreach ($pdfD1 as $dire)
-                        <a role="button" target="_blank" class="btn btn-primary" href="Archivos/{{$dire->documento}}" target="_self">Ver</a>
+                        <a role="button" target="_blank" class="btn btn-primary" href="Archivos/{{$dire->imagen}}" target="_self">Ver</a>
                       @endforeach
                       </div>
                       <small class="text-muted"></small>
@@ -65,7 +65,7 @@
                     <div class="d-flex justify-content-between align-items-center">
                       <div class="btn-group">
                       @foreach ($pdfD2 as $dire2)
-                        <a role="button" target="_blank" class="btn btn-primary" href="Archivos/{{$dire2->documento}}" target="_self">Ver</a>
+                        <a role="button" target="_blank" class="btn btn-primary" href="Archivos/{{$dire2->imagen}}" target="_self">Ver</a>
                       @endforeach
                       </div>
                       <small class="text-muted"></small>
@@ -85,7 +85,7 @@
                     <div class="d-flex justify-content-between align-items-center">
                       <div class="btn-group">
                       @foreach ($pdfD3 as $dire3)
-                        <a role="button" target="_blank" class="btn btn-primary" href="Archivos/{{$dire3->documento}}" target="_self">Ver</a>
+                        <a role="button" target="_blank" class="btn btn-primary" href="Archivos/{{$dire3->imagen}}" target="_self">Ver</a>
                       @endforeach
                       </div>
                       <small class="text-muted"></small>
@@ -106,7 +106,7 @@
                     <div class="d-flex justify-content-between align-items-center">
                       <div class="btn-group">
                       @foreach ($pdfD4 as $dire4)
-                        <a role="button" target="_blank" class="btn btn-primary" href="Archivos/{{$dire4->documento}}" target="_self">Ver</a>
+                        <a role="button" target="_blank" class="btn btn-primary" href="Archivos/{{$dire4->imagen}}" target="_self">Ver</a>
                       @endforeach
                       </div>
                       <small class="text-muted"></small>
@@ -126,7 +126,7 @@
                     <div class="d-flex justify-content-between align-items-center">
                       <div class="btn-group">
                       @foreach ($pdfD5 as $dire5)
-                        <a role="button" target="_blank" class="btn btn-primary" href="Archivos/{{$dire5->documento}}" target="_self">Ver</a>
+                        <a role="button" target="_blank" class="btn btn-primary" href="Archivos/{{$dire5->imagen}}" target="_self">Ver</a>
                       @endforeach
                       </div>
                       <small class="text-muted"></small>
@@ -145,7 +145,7 @@
                     <div class="d-flex justify-content-between align-items-center">
                       <div class="btn-group">
                       @foreach ($pdfD6 as $dire6)
-                        <a role="button" target="_blank" class="btn btn-primary" href="Archivos/{{$dire6->documento}}" target="_self">Ver</a>
+                        <a role="button" target="_blank" class="btn btn-primary" href="Archivos/{{$dire6->imagen}}" target="_self">Ver</a>
                       @endforeach
                       </div>
                       <small class="text-muted"></small>
@@ -165,7 +165,7 @@
                     <div class="d-flex justify-content-between align-items-center">
                       <div class="btn-group">
                       @foreach ($pdfD7 as $dire7)
-                        <a role="button" target="_blank" class="btn btn-primary" href="Archivos/{{$dire7->documento}}" target="_self">Ver</a>
+                        <a role="button" target="_blank" class="btn btn-primary" href="Archivos/{{$dire7->imagen}}" target="_self">Ver</a>
                       @endforeach
                       </div>
                       <small class="text-muted"></small>
@@ -185,7 +185,7 @@
                     <div class="d-flex justify-content-between align-items-center">
                       <div class="btn-group">
                       @foreach ($pdfD8 as $dire8)
-                        <a role="button" target="_blank" class="btn btn-primary" href="Archivos/{{$dire8->documento}}" target="_self">Ver</a>
+                        <a role="button" target="_blank" class="btn btn-primary" href="Archivos/{{$dire8->imagen}}" target="_self">Ver</a>
                       @endforeach
                       </div>
                       <small class="text-muted"></small>
@@ -204,7 +204,7 @@
                     <div class="d-flex justify-content-between align-items-center">
                       <div class="btn-group">
                       @foreach ($pdfD9 as $dire9)
-                        <a role="button" target="_blank" class="btn btn-primary" href="Archivos/{{$dire9->documento}}" target="_self">Ver</a>
+                        <a role="button" target="_blank" class="btn btn-primary" href="Archivos/{{$dire9->imagen}}" target="_self">Ver</a>
                       @endforeach
                       </div>
                       <small class="text-muted"></small>
@@ -223,7 +223,7 @@
                     <div class="d-flex justify-content-between align-items-center">
                       <div class="btn-group">
                       @foreach ($pdfD10 as $dire10)
-                        <a role="button" target="_blank" class="btn btn-primary" href="Archivos/{{$dire10->documento}}" target="_self">Ver</a>
+                        <a role="button" target="_blank" class="btn btn-primary" href="Archivos/{{$dire10->imagen}}" target="_self">Ver</a>
                       @endforeach
                       </div>
                       <small class="text-muted"></small>
@@ -242,7 +242,7 @@
                     <div class="d-flex justify-content-between align-items-center">
                       <div class="btn-group">
                       @foreach ($pdfD11 as $dire11)
-                        <a role="button" target="_blank" class="btn btn-primary" href="Archivos/{{$dire11->documento}}" target="_self">Ver</a>
+                        <a role="button" target="_blank" class="btn btn-primary" href="Archivos/{{$dire11->imagen}}" target="_self">Ver</a>
                       @endforeach
                       </div>
                       <small class="text-muted"></small>
@@ -261,7 +261,7 @@
                     <div class="d-flex justify-content-between align-items-center">
                       <div class="btn-group">
                       @foreach ($pdfD12 as $dire12)
-                        <a role="button" target="_blank" class="btn btn-primary" href="Archivos/{{$dire12->documento}}" target="_self">Ver</a>
+                        <a role="button" target="_blank" class="btn btn-primary" href="Archivos/{{$dire12->imagen}}" target="_self">Ver</a>
                       @endforeach
                       </div>
                       <small class="text-muted"></small>
@@ -280,7 +280,7 @@
                     <div class="d-flex justify-content-between align-items-center">
                       <div class="btn-group">
                       @foreach ($pdfD13 as $dire13)
-                        <a role="button" target="_blank" class="btn btn-primary" href="Archivos/{{$dire13->documento}}" target="_self">Ver</a>
+                        <a role="button" target="_blank" class="btn btn-primary" href="Archivos/{{$dire13->imagen}}" target="_self">Ver</a>
                       @endforeach
                       </div>
                       <small class="text-muted"></small>

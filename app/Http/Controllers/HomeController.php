@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Models\Imagen;
 use App\Models\Director;
+use App\Models\Docente;
+use App\Models\DocePlazaE;
+use App\Models\DocePlazaF;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
@@ -132,12 +135,188 @@ class HomeController extends Controller
 
     /**
     * Show the application dashboard.
-    *
+    * Docente
     * @return \Illuminate\http\Response
     */
     public function Docente()
     {
-        return view('Docente');
+        $datos = Docente::paginate(5);
+        return View('Docente', compact('datos'));
+    }
+
+    public function createDocentes()
+    {
+        return view('createDocentes');
+    }
+
+    public function InsertarDoce(Request $request)
+    {
+
+        $request->validate([
+            'imagen' => 'required|file|mimes:pdf,xlsx,docx,csv|max:2048'
+        ]);
+        $images = $request->all();
+
+        if($imagen = $request->file('imagen')) {
+            $rutaGuardarImg = 'Archivos/';
+            $imagenProducto = date('YmdHis').".". $imagen->getClientOriginalExtension();
+            $imagen->move($rutaGuardarImg, $imagenProducto);
+            $images['imagen'] = "$imagenProducto";
+        }
+
+        Docente::create($images);
+        return redirect()->route('Docente');
+
+    }
+
+    public function actualizarDoce(Request $request, Docente $pdfDoce)
+    {
+        $request->validate([
+            'imagen' => 'required|file|mimes:pdf,xlsx,docx,csv|max:2048'
+        ]);
+
+
+        $prod = $request->all();
+         if($imagen = $request->file('imagen')){
+            $rutaGuardarImg = 'Archivos/';
+            $imagenProducto = date('YmdHis') . "." . $imagen->getClientOriginalExtension(); 
+            $imagen->move($rutaGuardarImg, $imagenProducto);
+            $prod['imagen'] = "$imagenProducto";
+         }else{
+            unset($prod['imagen']);
+         }
+        $pdfDoce->update($prod);
+        return redirect()->route('Docente');
+    }
+
+    public function editardoc(Docente $pdfDoce)
+    {
+        return view('editarDocentes', compact('pdfDoce'));
+    }
+
+    /**
+    * Show the application dashboard.
+    * DOCENTES PLAZA ESTATAL
+    * @return \Illuminate\http\Response
+    */
+    public function docenPlazaestatal()
+    {
+        $datos = DocePlazaE::paginate(5);
+        return View('docenPlazaestatal', compact('datos'));
+
+    }
+
+    public function createDocePlazae()
+    {
+        return view('createDocePlazae');
+    }
+
+    public function InsertDocePlae(Request $request)
+    {
+
+        $request->validate([
+            'imagen' => 'required|file|mimes:pdf,xlsx,docx,csv|max:2048'
+        ]);
+        $images = $request->all();
+
+        if($imagen = $request->file('imagen')) {
+            $rutaGuardarImg = 'Archivos/';
+            $imagenProducto = date('YmdHis').".". $imagen->getClientOriginalExtension();
+            $imagen->move($rutaGuardarImg, $imagenProducto);
+            $images['imagen'] = "$imagenProducto";
+        }
+
+        DocePlazaE::create($images);
+        return redirect()->route('docenPlazaestatal');
+
+    }
+
+    public function actualizarDocePlae(Request $request, DocePlazaE $pdfDoce)
+    {
+        $request->validate([
+            'imagen' => 'required|file|mimes:pdf,xlsx,docx,csv|max:2048'
+        ]);
+
+
+        $prod = $request->all();
+         if($imagen = $request->file('imagen')){
+            $rutaGuardarImg = 'Archivos/';
+            $imagenProducto = date('YmdHis') . "." . $imagen->getClientOriginalExtension(); 
+            $imagen->move($rutaGuardarImg, $imagenProducto);
+            $prod['imagen'] = "$imagenProducto";
+         }else{
+            unset($prod['imagen']);
+         }
+        $pdfDoce->update($prod);
+        return redirect()->route('docenPlazaestatal');
+    }
+
+    public function editardocPlae(DocePlazaE $pdfDoce)
+    {
+        return view('editarDocePlazae', compact('pdfDoce'));
+    }
+
+    /**
+    * Show the application dashboard.
+    * DOCENTES PLAZA FEDERAL
+    * @return \Illuminate\http\Response
+    */
+
+    public function docenPlazafederal()
+    {
+        $datos = DocePlazaF::paginate(5);
+        return View('docenPlazafederal', compact('datos'));
+
+    }
+
+    public function createDocePlazaf()
+    {
+        return view('createDocePlazaf');
+    }
+
+    public function InsertDocePlaf(Request $request)
+    {
+
+        $request->validate([
+            'imagen' => 'required|file|mimes:pdf,xlsx,docx,csv|max:2048'
+        ]);
+        $images = $request->all();
+
+        if($imagen = $request->file('imagen')) {
+            $rutaGuardarImg = 'Archivos/';
+            $imagenProducto = date('YmdHis').".". $imagen->getClientOriginalExtension();
+            $imagen->move($rutaGuardarImg, $imagenProducto);
+            $images['imagen'] = "$imagenProducto";
+        }
+
+        DocePlazaF::create($images);
+        return redirect()->route('docenPlazafederal');
+
+    }
+
+    public function actualizarDocePlaf(Request $request, DocePlazaF $pdfDoce)
+    {
+        $request->validate([
+            'imagen' => 'required|file|mimes:pdf,xlsx,docx,csv|max:2048'
+        ]);
+
+
+        $prod = $request->all();
+         if($imagen = $request->file('imagen')){
+            $rutaGuardarImg = 'Archivos/';
+            $imagenProducto = date('YmdHis') . "." . $imagen->getClientOriginalExtension(); 
+            $imagen->move($rutaGuardarImg, $imagenProducto);
+            $prod['imagen'] = "$imagenProducto";
+         }else{
+            unset($prod['imagen']);
+         }
+        $pdfDoce->update($prod);
+        return redirect()->route('docenPlazafederal');
+    }
+
+    public function editardocPlaf(DocePlazaF $pdfDoce)
+    {
+        return view('editarDocePlazaf', compact('pdfDoce'));
     }
 
     /**
@@ -160,6 +339,7 @@ class HomeController extends Controller
     {
         return view('createDirector');
     }
+    
     /**
     * Show the application dashboard.
     *
@@ -220,3 +400,4 @@ class HomeController extends Controller
         return redirect()->route('Director');
     }
 }
+

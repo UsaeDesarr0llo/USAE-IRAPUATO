@@ -59,7 +59,33 @@ Route::post('/editarDirector/{datos}', [App\Http\Controllers\HomeController::cla
 |
 */
 Route::get('/Docente', [App\Http\Controllers\HomeController::class, 'Docente'])->name('Docente')->middleware('verified');
+Route::post('EnvioDatosDoc', [App\Http\Controllers\HomeController::class, 'InsertarDoce'])->name('InsertarDoce')->middleware('verified');
+Route::get('/editarDocentes/{pdfDoce}', [App\Http\Controllers\HomeController::class, 'editardoc'])->name('editardoc')->middleware('verified');
+Route::post('/editarDocentes/{pdfDoce}', [App\Http\Controllers\HomeController::class,'actualizarDoce'])->name('actualizarDoce')->middleware('verified');
+Route::get('/createDocentes', [App\Http\Controllers\HomeController::class, 'createDocentes'])->name('createDocentes')->middleware('verified');
+/*
+|--------------------------------------------------------------------------
+| Web Routes for admin (Docentes Plaza Estatal)
+|--------------------------------------------------------------------------
+|
+*/
+Route::get('/docenPlazaestatal', [App\Http\Controllers\HomeController::class, 'docenPlazaestatal'])->name('docenPlazaestatal')->middleware('verified');
+Route::post('EnvioDatosPlaE', [App\Http\Controllers\HomeController::class, 'InsertDocePlae'])->name('InsertDocePlae')->middleware('verified');
+Route::get('/createDocePlazae', [App\Http\Controllers\HomeController::class, 'createDocePlazae'])->name('createDocePlazae')->middleware('verified');
+Route::get('/editarDocePlazae/{pdfDoce}', [App\Http\Controllers\HomeController::class, 'editardocPlae'])->name('editardocPlae')->middleware('verified');
+Route::post('/editarDocePlazae/{pdfDoce}', [App\Http\Controllers\HomeController::class,'actualizarDocePlae'])->name('actualizarDocePlae')->middleware('verified');
 
+/*
+|--------------------------------------------------------------------------
+| Web Routes for admin (Docentes Plaza Federal)
+|--------------------------------------------------------------------------
+|
+*/
+Route::get('/docenPlazafederal', [App\Http\Controllers\HomeController::class, 'docenPlazafederal'])->name('docenPlazafederal')->middleware('verified');
+Route::post('EnvioDatosPlaF', [App\Http\Controllers\HomeController::class, 'InsertDocePlaf'])->name('InsertDocePlaf')->middleware('verified');
+Route::get('/createDocePlazaf', [App\Http\Controllers\HomeController::class, 'createDocePlazaf'])->name('createDocePlazaf')->middleware('verified');
+Route::get('/editarDocePlazaf/{pdfDoce}', [App\Http\Controllers\HomeController::class, 'editardocPlaf'])->name('editardocPlaf')->middleware('verified');
+Route::post('/editarDocePlazaf/{pdfDoce}', [App\Http\Controllers\HomeController::class,'actualizarDocePlaf'])->name('actualizarDocePlaf')->middleware('verified');
 /*
 |--------------------------------------------------------------------------
 | Web Routes for welcome (anuncios and contador)
