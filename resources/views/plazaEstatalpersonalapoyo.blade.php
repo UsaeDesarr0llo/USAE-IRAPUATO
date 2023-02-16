@@ -27,8 +27,9 @@
               <p class="card-text text-center">SERVICIO MÉDICO ISSSTE</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
-                  <a role="button" class="btn btn-primary"href="pdf/servicio medico issste2.pdf" target="_self">Ver</a>
-                  
+                  @foreach ($pdf1 as $doc1)
+                    <a role="button" target="_blank" class="btn btn-primary" href="Archivos/{{$doc1->pdf}}" target="_self">Ver</a>
+                  @endforeach
                 </div>
                 <small class="text-muted"></small>
               </div>
@@ -46,8 +47,9 @@
               <p class="card-text text-center">ISSEG</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
-                  <a role ="button" class="btn btn-primary"href="pdf/isseg2.pdf" target="_self">Ver</a>
-                  
+                  @foreach ($pdf2 as $doc2)
+                    <a role="button" target="_blank" class="btn btn-primary" href="Archivos/{{$doc2->pdf}}" target="_self">Ver</a>
+                  @endforeach
                 </div>
                 <small class="text-muted"></small>
               </div>
@@ -65,8 +67,9 @@
                 <p class="card-text text-center">FORTE</p>
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="btn-group">
-                    <a role ="button" class="btn btn-primary"href="pdf/forte2personalApoyo.pdf" target="_self">Ver</a>
-                    
+                    @foreach ($pdf3 as $doc3)
+                      <a role="button" target="_blank" class="btn btn-primary" href="Archivos/{{$doc3->pdf}}" target="_self">Ver</a>
+                    @endforeach
                   </div>
                   <small class="text-muted"></small>
                 </div>
@@ -84,8 +87,9 @@
                 <p class="card-text text-center">PRÉSTAMOS PERSONALES</p>
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="btn-group">
-                    <a role ="button" class="btn btn-primary"href="pdf/prestamos personales2 vistapersonalApoyo.pdf" target="_self">Ver</a>
-                    
+                    @foreach ($pdf4 as $doc4)
+                      <a role="button" target="_blank" class="btn btn-primary" href="Archivos/{{$doc4->pdf}}" target="_self">Ver</a>
+                    @endforeach
                   </div>
                   <small class="text-muted"></small>
                 </div>
@@ -103,8 +107,9 @@
                 <p class="card-text text-center">DESIGNACIÓN DE BENEFICIARIOS</p>
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="btn-group">
-                    <a role ="button" class="btn btn-primary"href="pdf/designacion beneficiarios2 vistapersonalApoyo.pdf" target="_self">Ver</a>
-                    
+                    @foreach ($pdf5 as $doc5)
+                      <a role="button" target="_blank" class="btn btn-primary" href="Archivos/{{$doc5->pdf}}" target="_self">Ver</a>
+                    @endforeach
                   </div>
                   <small class="text-muted"></small>
                 </div>
@@ -122,8 +127,9 @@
                 <p class="card-text text-center">NÓMINA ELECTRÓNICA</p>
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="btn-group">
-                    <a role ="button" class="btn btn-primary"href="pdf/nómina electrónica2 vistapersonalApoyo.pdf" target="_self">Ver</a>
-                    
+                    @foreach ($pdf6 as $doc6)
+                      <a role="button" target="_blank" class="btn btn-primary" href="Archivos/{{$doc6->pdf}}" target="_self">Ver</a>
+                    @endforeach
                   </div>
                   <small class="text-muted"></small>
                 </div>
@@ -141,8 +147,9 @@
                 <p class="card-text text-center">Vacaciones y Aguinaldo</p>
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="btn-group">
-                    <a role ="button" class="btn btn-primary"href="pdf/Vacaciones y aguinaldo vistapersonalApoyo.pdf" target="_self">Ver</a>
-                    
+                    @foreach ($pdf7 as $doc7)
+                      <a role="button" target="_blank" class="btn btn-primary" href="Archivos/{{$doc7->pdf}}" target="_self">Ver</a>
+                    @endforeach
                   </div>
                   <small class="text-muted"></small>
                 </div>
@@ -160,8 +167,9 @@
                 <p class="card-text text-center">Jornada Laboral</p>
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="btn-group">
-                    <a role ="button" class="btn btn-primary"href="pdf/Jornada laboral vistapersonalApoyo.pdf" target="_self">Ver</a>
-                    
+                    @foreach ($pdf8 as $doc8)
+                      <a role="button" target="_blank" class="btn btn-primary" href="Archivos/{{$doc8->pdf}}" target="_self">Ver</a>
+                    @endforeach
                   </div>
                   <small class="text-muted"></small>
                 </div>
@@ -179,8 +187,9 @@
                 <p class="card-text text-center">Días de Descanso</p>
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="btn-group">
-                    <a role ="button" class="btn btn-primary"href="pdf/Dias de descanso vistapersonalApoyo.pdf" target="_self">Ver</a>
-                    
+                    @foreach ($pdf9 as $doc9)
+                      <a role="button" target="_blank" class="btn btn-primary" href="Archivos/{{$doc9->pdf}}" target="_self">Ver</a>
+                    @endforeach
                   </div>
                   <small class="text-muted"></small>
                 </div>
@@ -198,8 +207,9 @@
                 <p class="card-text text-center">Permisos</p>
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="btn-group">
-                    <a role ="button" class="btn btn-primary"href="pdf/Permisos vistapersonalApoyo.pdf" target="_self">Ver</a>
-                    
+                    @foreach ($pdf10 as $doc10)
+                      <a role="button" target="_blank" class="btn btn-primary" href="Archivos/{{$doc10->pdf}}" target="_self">Ver</a>
+                    @endforeach
                   </div>
                   <small class="text-muted"></small>
                 </div>
@@ -217,8 +227,9 @@
                 <p class="card-text text-center">Salarios y Descuentos</p>
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="btn-group">
-                    <a role ="button" class="btn btn-primary"href="pdf/Salarios y descuentos vistapersonalApoyo.pdf" target="_self">Ver</a>
-                    
+                    @foreach ($pdf11 as $doc11)
+                      <a role="button" target="_blank" class="btn btn-primary" href="Archivos/{{$doc11->pdf}}" target="_self">Ver</a>
+                    @endforeach
                   </div>
                   <small class="text-muted"></small>
                 </div>
@@ -237,8 +248,9 @@
               <p class="card-text text-center">Apoyos Económicos</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
-                  <a role ="button" class="btn btn-primary"href="pdf/Apoyos económicos vistapersonalApoyo.pdf" target="_self">Ver</a>
-                  
+                  @foreach ($pdf12 as $doc12)
+                    <a role="button" target="_blank" class="btn btn-primary" href="Archivos/{{$doc12->pdf}}" target="_self">Ver</a>
+                  @endforeach
                 </div>
                 <small class="text-muted"></small>
               </div>

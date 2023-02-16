@@ -21,7 +21,7 @@
     <div class="max-w-7x1 mx-auto sm:px-6 lg:px-8">
         <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
         <center><h3>Prestaciones Plaza Federal</h3></center>
-        <a type="button" href="{{ route('createprestacionesFederal') }}" class="bg-indigo-500 px-12 py-2 rounded text-gray-200 font-semibold hover:bg-indigo-800 transition duration-200 each-in-out">Crear</a>
+        <!--<a type="button" href="{{ route('createprestacionesFederal') }}" class="bg-indigo-500 px-12 py-2 rounded text-gray-200 font-semibold hover:bg-indigo-800 transition duration-200 each-in-out">Crear</a>-->
         <a type="button" href="{{ route('prestacionesEstatal') }}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded">Prestaciones Plaza Estatal</a>
         <a type="button" href="{{ route('Personal') }}" class="rounded bg-pink-400 hover:bg-pink-500 text-white font-bold py-2 px-2">Personal de Apoyo</a>
             <table class="table-fixed w-full">

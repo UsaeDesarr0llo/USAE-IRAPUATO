@@ -28,8 +28,9 @@
               <p class="card-text text-center">SEGURIDAD SOCIAL Y SERVICIO MÉDICO</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
-                  <a role="button" class="btn btn-primary"href="pdf/Seguridad social servicio médico vistapersonalApoyo.pdf" target="_self">Ver</a>
-                  
+                  @foreach ($pdfDo1 as $doc1)
+                    <a role="button" target="_blank" class="btn btn-primary" href="Archivos/{{$doc1->pdf}}" target="_self">Ver</a>
+                  @endforeach
                 </div>
                 <small class="text-muted"></small>
               </div>
@@ -47,8 +48,9 @@
               <p class="card-text text-center">PENSIÓN Y RETIRO</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
-                  <a role ="button" class="btn btn-primary"href="pdf/Pensíon y retiro vistapersonalApoyo.pdf" target="_self">Ver</a>
-                  
+                  @foreach ($pdfDo2 as $doc2)
+                    <a role="button" target="_blank" class="btn btn-primary" href="Archivos/{{$doc2->pdf}}" target="_self">Ver</a>
+                  @endforeach
                 </div>
                 <small class="text-muted"></small>
               </div>
@@ -66,8 +68,9 @@
                 <p class="card-text text-center">Ahorro Solidario</p>
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="btn-group">
-                    <a role ="button" class="btn btn-primary"href="pdf/Ahorro solidario vistapersonalApoyo.pdf" target="_self">Ver</a>
-                    
+                    @foreach ($pdfDo3 as $doc3)
+                      <a role="button" target="_blank" class="btn btn-primary" href="Archivos/{{$doc3->pdf}}" target="_self">Ver</a>
+                    @endforeach
                   </div>
                   <small class="text-muted"></small>
                 </div>
@@ -85,8 +88,9 @@
                 <p class="card-text text-center">Forte</p>
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="btn-group">
-                    <a role ="button" class="btn btn-primary"href="pdf/Forte vistapersonalApoyo.pdf" target="_self">Ver</a>
-                    
+                    @foreach ($pdfDo4 as $doc4)
+                      <a role="button" target="_blank" class="btn btn-primary" href="Archivos/{{$doc4->pdf}}" target="_self">Ver</a>
+                    @endforeach
                   </div>
                   <small class="text-muted"></small>
                 </div>
@@ -104,8 +108,9 @@
                 <p class="card-text text-center">Seguro de Vida METLIFE</p>
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="btn-group">
-                    <a role ="button" class="btn btn-primary"href="pdf/Seguro de vida metlife vistapersonalApoyo.pdf" target="_self">Ver</a>
-                    
+                    @foreach ($pdfDo5 as $doc5)
+                      <a role="button" target="_blank" class="btn btn-primary" href="Archivos/{{$doc5->pdf}}" target="_self">Ver</a>
+                    @endforeach
                   </div>
                   <small class="text-muted"></small>
                 </div>
@@ -123,8 +128,9 @@
                 <p class="card-text text-center">Préstamos Personales</p>
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="btn-group">
-                    <a role ="button" class="btn btn-primary"href="pdf/Préstamos personales vistapersonalApoyo.pdf" target="_self">Ver</a>
-                    
+                    @foreach ($pdfDo6 as $doc6)
+                      <a role="button" target="_blank" class="btn btn-primary" href="Archivos/{{$doc6->pdf}}" target="_self">Ver</a>
+                    @endforeach
                   </div>
                   <small class="text-muted"></small>
                 </div>
@@ -142,8 +148,9 @@
                 <p class="card-text text-center">Designación de Beneficiarios</p>
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="btn-group">
-                    <a role ="button" class="btn btn-primary"href="pdf/Designación de beneficiarios vistapersonalApoyo.pdf" target="_self">Ver</a>
-                    
+                    @foreach ($pdfDo7 as $doc7)
+                      <a role="button" target="_blank" class="btn btn-primary" href="Archivos/{{$doc7->pdf}}" target="_self">Ver</a>
+                    @endforeach
                   </div>
                   <small class="text-muted"></small>
                 </div>
@@ -161,8 +168,9 @@
                 <p class="card-text text-center">Nómina Electrónica</p>
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="btn-group">
-                    <a role ="button" class="btn btn-primary"href="pdf/Nómina electrónica vistapersonalApoyo.pdf" target="_self">Ver</a>
-                    
+                    @foreach ($pdfDo8 as $doc8)
+                      <a role="button" target="_blank" class="btn btn-primary" href="Archivos/{{$doc8->pdf}}" target="_self">Ver</a>
+                    @endforeach
                   </div>
                   <small class="text-muted"></small>
                 </div>
@@ -180,8 +188,9 @@
                 <p class="card-text text-center">DÍAS DE DESCANSO</p>
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="btn-group">
-                    <a role ="button" class="btn btn-primary"href="pdf/Días de descanso vistapersonalApoyo.pdf" target="_self">Ver</a>
-                    
+                    @foreach ($pdfDo9 as $doc9)
+                      <a role="button" target="_blank" class="btn btn-primary" href="Archivos/{{$doc9->pdf}}" target="_self">Ver</a>
+                    @endforeach
                   </div>
                   <small class="text-muted"></small>
                 </div>
@@ -199,8 +208,9 @@
                 <p class="card-text text-center">Permisos</p>
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="btn-group">
-                    <a role ="button" class="btn btn-primary"href="pdf/Permisos2 vistapersonalApoyo.pdf" target="_self">Ver</a>
-                    
+                    @foreach ($pdfDo10 as $doc10)
+                      <a role="button" target="_blank" class="btn btn-primary" href="Archivos/{{$doc10->pdf}}" target="_self">Ver</a>
+                    @endforeach
                   </div>
                   <small class="text-muted"></small>
                 </div>
@@ -218,8 +228,9 @@
                 <p class="card-text text-center">Salarios y Descansos</p>
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="btn-group">
-                    <a role ="button" class="btn btn-primary"href="pdf/Descuentos y salarios2 vistapersonalApoyo.pdf" target="_self">Ver</a>
-                    
+                    @foreach ($pdfDo11 as $doc11)
+                      <a role="button" target="_blank" class="btn btn-primary" href="Archivos/{{$doc11->pdf}}" target="_self">Ver</a>
+                    @endforeach
                   </div>
                   <small class="text-muted"></small>
                 </div>
@@ -238,8 +249,9 @@
               <p class="card-text text-center">Vacaciones y Aguinaldo</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
-                  <a role ="button" class="btn btn-primary"href="pdf/Vacaciones y aguinaldo2 vistapersonalApoyo.pdf" target="_self">Ver</a>
-                  
+                  @foreach ($pdfDo12 as $doc12)
+                    <a role="button" target="_blank" class="btn btn-primary" href="Archivos/{{$doc12->pdf}}" target="_self">Ver</a>
+                  @endforeach
                 </div>
                 <small class="text-muted"></small>
               </div>
